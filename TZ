@@ -1,0 +1,292 @@
+📘 ТЕХНИЧЕСКОЕ ЗАДАНИЕ
+
+Проект: Tor-SOCKS Farm Automation
+
+Цель: автоматическое развёртывание пула Tor-нод (минимум 50, масштаб до 500) на сервере Linux (Ubuntu 22.04+), каждая нода предоставляет SOCKS5-прокси.
+Поддержка: ротация нод по расписанию, выбор страны выхода, исключение утечек DNS/IPv6, управление через CLI и systemd.
+
+⸻
+
+1. Общие требования
+	1.	ОС: Ubuntu 22.04 LTS / 24.04 LTS.
+	2.	Языки/инструменты: Bash (совместимость POSIX), systemd, iptables.
+	3.	Все пути, имена файлов и порты фиксированы согласно пунктам ниже.
+	4.	Установка полностью автоматическая, без подтверждений.
+	5.	После установки должно быть:
+	•	минимум 50 активных Tor-инстансов;
+	•	возможность масштабирования до 500;
+	•	по одному SOCKS5-эндпоинту с аутентификацией на каждый Tor-инстанс.
+	6.	Полная изоляция DNS и IPv6 (никаких утечек).
+
+⸻
+
+2. Директории проекта
+
+/opt/tor-socks-farm/
+ ├─ scripts/
+ │   ├─ install.sh
+ │   ├─ deploy_tor_instances.sh
+ │   ├─ deploy_3proxy_endpoints.sh
+ │   ├─ rotate.sh
+ │   ├─ enable_rotation.sh
+ │   └─ tor_iptables_apply.sh
+ ├─ systemd/
+ │   ├─ tor@.service
+ │   ├─ 3proxy@.service
+ │   ├─ rotate.service
+ │   └─ rotate.timer
+ ├─ config/
+ │   ├─ torfarm.env
+ │   ├─ countries.map
+ │   ├─ users.csv
+ │   └─ control.password
+ ├─ 3proxy/
+ │   └─ instance.cfg.tpl
+ └─ firewall/
+     └─ hardening.sh
+
+
+⸻
+
+3. Параметры по умолчанию
+
+Параметр	Значение	Описание
+MIN_INSTANCES	50	стартовое количество
+MAX_INSTANCES	500	лимит
+BASE_SOCKS_PORT	9000	локальные SOCKS 9001..
+BASE_CTRL_PORT	9100	ControlPort 9101..
+BASE_DNS_PORT	9200	DNSPort 9201..
+BASE_TRANS_PORT	9300	TransPort 9301..
+BASE_PUBLIC_PORT	20000	внешние SOCKS 20001..
+ROTATE_EVERY_MIN	30	интервал ротации (мин.)
+DEFAULT_COUNTRY	*	без фиксации страны
+
+
+⸻
+
+4. Файлы конфигурации
+
+4.1 config/torfarm.env
+
+Хранит глобальные переменные (см. п. 3).
+
+4.2 config/countries.map
+
+Формат:
+
+001=us
+002=de
+003=*
+...
+
+* – без ограничения страны.
+
+4.3 config/users.csv
+
+Формат CSV с заголовком:
+
+instance,user,password
+001,user001,pass001
+002,user002,pass002
+...
+
+4.4 config/control.password
+
+Содержит plain-текст пароль для Tor ControlPort.
+Сценарий deploy_tor_instances.sh создаёт его хэш и вписывает в каждый torrc.instanceNNN.
+
+⸻
+
+5. Скрипты (требования к реализации)
+
+5.1 scripts/install.sh
+	•	Проверяет root-права.
+	•	Устанавливает пакеты:
+
+apt-get install -y tor 3proxy netcat-traditional jq
+
+
+	•	Создаёт системных пользователей:
+
+useradd -r -s /usr/sbin/nologin debian-tor || true
+useradd -r -s /usr/sbin/nologin proxy || true
+
+
+	•	Копирует systemd-юниты в /etc/systemd/system/.
+	•	Выключает IPv6 в /etc/sysctl.conf.
+	•	Выполняет systemctl daemon-reload.
+
+5.2 scripts/deploy_tor_instances.sh
+
+Аргумент: количество (по умолчанию 50).
+Для каждого инстанса 001..COUNT:
+	1.	Создаёт /var/lib/tor/instanceNNN (влад. debian-tor).
+	2.	Генерирует /etc/tor/torrc.instanceNNN со следующими параметрами:
+
+DataDirectory /var/lib/tor/instanceNNN
+SocksPort 127.0.0.1:900N
+ControlPort 127.0.0.1:910N
+HashedControlPassword <HASH>
+DNSPort 127.0.0.1:920N
+TransPort 127.0.0.1:930N
+Log notice file /var/log/tor/instanceNNN.log
+ClientOnly 1
+AvoidDiskWrites 1
+VirtualAddrNetworkIPv4 10.192.0.0/10
+AutomapHostsOnResolve 1
+
+
+	3.	Активирует юнит tor@NNN:
+
+systemctl enable --now tor@NNN
+
+
+	4.	Проверяет статус (active (running)).
+
+5.3 scripts/deploy_3proxy_endpoints.sh
+
+Аргумент: количество.
+Для каждого инстанса:
+	1.	Берёт данные из users.csv.
+	2.	Генерирует /etc/3proxy/instanceNNN.cfg из шаблона 3proxy/instance.cfg.tpl:
+
+auth strong
+users <user>:CL:<password>
+socks -p<public_port> -a
+parent 1000 socks5 127.0.0.1 <local_socks>
+
+
+	3.	Запускает systemctl enable --now 3proxy@NNN.
+
+5.4 scripts/rotate.sh
+	•	Читает countries.map и control.password.
+	•	Для каждого активного torrc.instanceNNN выполняет через nc:
+
+AUTHENTICATE "<password>"
+SETCONF ExitNodes={xx} StrictNodes=1
+SIGNAL NEWNYM
+QUIT
+
+
+	•	Если *, отправляет SETCONF ExitNodes= (сбрасывает ограничение).
+	•	Логирует результат в stdout.
+
+5.5 scripts/enable_rotation.sh
+	•	Устанавливает OnUnitActiveSec=${ROTATE_EVERY_MIN}m в /etc/systemd/system/rotate.timer.
+	•	Активирует таймер:
+
+systemctl enable --now rotate.timer
+
+
+
+5.6 scripts/tor_iptables_apply.sh
+	•	Создаёт бэкап правил:
+iptables-save > /root/iptables.backup.$(date +%s)
+	•	Определяет UID пользователя debian-tor.
+	•	Добавляет правила:
+
+iptables -I OUTPUT -p udp --dport 53 -m owner ! --uid-owner $TOR_UID -j REJECT
+iptables -I OUTPUT -p tcp --dport 53 -m owner ! --uid-owner $TOR_UID -j REJECT
+
+
+	•	(Опционально) REDIRECT весь TCP в TransPort 9301, кроме SSH.
+	•	Выводит инструкцию по откату:
+iptables-restore < /root/iptables.backup.<timestamp>.
+
+⸻
+
+6. systemd юниты
+
+6.1 /etc/systemd/system/tor@.service
+
+[Unit]
+Description=Tor instance %i
+After=network-online.target
+[Service]
+User=debian-tor
+Group=debian-tor
+ExecStart=/usr/bin/tor -f /etc/tor/torrc.instance%i
+Restart=on-failure
+LimitNOFILE=65536
+[Install]
+WantedBy=multi-user.target
+
+6.2 /etc/systemd/system/3proxy@.service
+
+[Unit]
+Description=3proxy endpoint %i
+After=network-online.target
+[Service]
+User=proxy
+Group=proxy
+ExecStart=/usr/bin/3proxy /etc/3proxy/instance%i.cfg
+Restart=on-failure
+LimitNOFILE=65536
+[Install]
+WantedBy=multi-user.target
+
+6.3 /etc/systemd/system/rotate.service
+
+[Unit]
+Description=Rotate Tor identities
+[Service]
+Type=oneshot
+ExecStart=/opt/tor-socks-farm/scripts/rotate.sh
+
+6.4 /etc/systemd/system/rotate.timer
+
+[Unit]
+Description=Periodic rotation timer
+[Timer]
+OnBootSec=5m
+OnUnitActiveSec=30m
+Unit=rotate.service
+[Install]
+WantedBy=timers.target
+
+
+⸻
+
+7. Требования к безопасности
+	1.	IPv6 выключен.
+	2.	Все DNS-запросы разрешены только пользователю debian-tor.
+	3.	Публичные SOCKS-порты слушают только при активной аутентификации 3proxy.
+	4.	Не допускается bind Tor на 0.0.0.0.
+	5.	Должна существовать инструкция rollback для iptables.
+
+⸻
+
+8. Критерии приёмки
+	1.	После install.sh и deploy_tor_instances.sh 50:
+	•	Активно 50 юнитов tor@NNN ( systemctl list-units | grep tor@ ).
+	•	Каждый отвечает на 127.0.0.1:900N.
+	2.	После deploy_3proxy_endpoints.sh 50:
+	•	Активно 50 юнитов 3proxy@NNN.
+	•	Подключение через SERVER_IP:200N + логин/пароль даёт Tor IP в браузере.
+	3.	При rotate.sh: меняется Tor exit IP; при countries.map указана страна — выходной IP соответствует.
+	4.	Тест на DNS/IPv6 leak показывает нулевые утечки.
+	5.	Интервал ротации изменяется через config/torfarm.env.
+	6.	При масштабе до 500 нод все юниты активируются без ошибок.
+
+⸻
+
+9. Команда для полного деплоя
+
+bash /opt/tor-socks-farm/scripts/install.sh
+bash /opt/tor-socks-farm/scripts/deploy_tor_instances.sh 50
+bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
+bash /opt/tor-socks-farm/scripts/enable_rotation.sh
+bash /opt/tor-socks-farm/firewall/hardening.sh
+
+
+⸻
+
+10. Результат
+
+После выполнения:
+	•	На сервере активно N Tor-нод (50 по умолчанию, до 500).
+	•	Доступные публичные SOCKS5 эндпоинты на портах 20001..20050.
+	•	Каждые 30 минут Tor ротация через ControlPort (NEWNYM + ExitNodes={country}).
+	•	Нет утечек DNS или IPv6.
+
+⸻
