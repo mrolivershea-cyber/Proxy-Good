@@ -14,6 +14,13 @@ BACKUP_FILE="/root/iptables.backup.$(date +%s)"
 echo "Creating backup: $BACKUP_FILE"
 iptables-save > "$BACKUP_FILE"
 
+# Verify debian-tor user exists
+if ! id -u debian-tor >/dev/null 2>&1; then
+  echo "ERROR: debian-tor user does not exist"
+  echo "Please run install.sh first"
+  exit 1
+fi
+
 # Get UID of debian-tor user
 TOR_UID=$(id -u debian-tor)
 echo "Tor UID: $TOR_UID"

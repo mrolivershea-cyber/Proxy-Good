@@ -53,6 +53,13 @@ echo "Reloading systemd daemon..."
 systemctl daemon-reload
 
 echo "=== Installation completed successfully ==="
+echo ""
+echo "⚠️  SECURITY WARNING ⚠️"
+echo "Default passwords in config/users.csv and config/control.password are WEAK!"
+echo "For production use, generate strong passwords:"
+echo "  openssl rand -base64 32 > /opt/tor-socks-farm/config/control.password"
+echo "  for i in {1..50}; do PASS=\$(openssl rand -base64 16); printf \"%03d,user%03d,%s\n\" \$i \$i \"\$PASS\"; done > /opt/tor-socks-farm/config/users.csv.new"
+echo ""
 echo "Next steps:"
 echo "  1. Run: bash /opt/tor-socks-farm/scripts/deploy_tor_instances.sh 50"
 echo "  2. Run: bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50"
