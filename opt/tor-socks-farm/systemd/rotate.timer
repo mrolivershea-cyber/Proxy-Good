@@ -1,0 +1,10 @@
+[Unit]
+Description=Periodic rotation timer
+
+[Timer]
+OnBootSec=5m
+OnUnitActiveSec=30m
+Unit=rotate.service
+
+[Install]
+WantedBy=timers.target

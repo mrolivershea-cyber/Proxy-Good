@@ -1,0 +1,6 @@
+[Unit]
+Description=Rotate Tor identities
+
+[Service]
+Type=oneshot
+ExecStart=/opt/tor-socks-farm/scripts/rotate.sh
