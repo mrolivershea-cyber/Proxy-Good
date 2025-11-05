@@ -21,7 +21,9 @@ ROTATED=0
 FAILED=0
 
 for INSTANCE_NUM in $INSTANCES; do
-  CTRL_PORT=$((BASE_CTRL_PORT + 10#$INSTANCE_NUM))
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  CTRL_PORT=$((BASE_CTRL_PORT + INSTANCE_INT))
   
   # Get country from countries.map
   COUNTRY=$(grep "^$INSTANCE_NUM=" /opt/tor-socks-farm/config/countries.map 2>/dev/null | cut -d'=' -f2 || echo "*")

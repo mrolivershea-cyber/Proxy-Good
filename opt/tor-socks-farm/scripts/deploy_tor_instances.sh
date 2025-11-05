@@ -26,12 +26,12 @@ CONTROL_PASSWORD=$(cat /opt/tor-socks-farm/config/control.password | tr -d '\n')
 HASHED_PASSWORD=$(tor --hash-password "$CONTROL_PASSWORD" | tail -n1)
 
 # Deploy each instance
-for i in $(seq -f "%03g" 1 $COUNT); do
+for i in $(seq 1 $COUNT); do
   INSTANCE_NUM=$(printf "%03d" $i)
-  SOCKS_PORT=$((BASE_SOCKS_PORT + 10#$i))
-  CTRL_PORT=$((BASE_CTRL_PORT + 10#$i))
-  DNS_PORT=$((BASE_DNS_PORT + 10#$i))
-  TRANS_PORT=$((BASE_TRANS_PORT + 10#$i))
+  SOCKS_PORT=$((BASE_SOCKS_PORT + i))
+  CTRL_PORT=$((BASE_CTRL_PORT + i))
+  DNS_PORT=$((BASE_DNS_PORT + i))
+  TRANS_PORT=$((BASE_TRANS_PORT + i))
   
   echo "Deploying instance $INSTANCE_NUM (SOCKS: $SOCKS_PORT, Control: $CTRL_PORT)..."
   
