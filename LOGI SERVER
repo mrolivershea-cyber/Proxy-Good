@@ -1,4 +1,4 @@
-Last login: Wed Nov  5 08:32:19 on ttys000
+Last login: Wed Nov  5 15:36:46 on ttys000
 exchange@Mysteriouss-Air ~ % ssh root@195.26.255.18
 root@195.26.255.18's password: 
 Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-160-generic x86_64)
@@ -7,17 +7,17 @@ Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-160-generic x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/pro
 
- System information as of Wed Nov  5 04:36:47 CET 2025
+ System information as of Wed Nov  5 09:58:09 CET 2025
 
-  System load:           0.0
-  Usage of /:            0.6% of 387.48GB
-  Memory usage:          1%
-  Swap usage:            0%
-  Processes:             157
-  Users logged in:       0
-  IPv4 address for eth0: 195.26.255.18
-  IPv6 address for eth0: 2605:a140:2288:1987::1
+  System load:  0.0                Processes:             160
+  Usage of /:   0.7% of 387.48GB   Users logged in:       0
+  Memory usage: 2%                 IPv4 address for eth0: 195.26.255.18
+  Swap usage:   0%
 
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
 
 Expanded Security Maintenance for Applications is not enabled.
 
@@ -42,54 +42,103 @@ Welcome!
 This server is hosted by Contabo. If you have any questions or need help,
 please don't hesitate to contact us at support@contabo.com.
 
-Last login: Wed Nov  5 02:32:32 2025 from 113.189.109.248
-root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/install.sh
-=== Tor-SOCKS Farm Installation Script ===
-Starting installation process...
-Installing packages: tor, netcat-traditional, jq, build-essential...
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-build-essential is already the newest version (12.9ubuntu3).
-netcat-traditional is already the newest version (1.10-47).
-tor is already the newest version (0.4.6.10-1).
-jq is already the newest version (1.6-2.1ubuntu3.1).
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-3proxy already installed
-Creating system users...
-Installing systemd units...
-Disabling IPv6...
-net.ipv6.conf.all.disable_ipv6 = 1
-net.ipv6.conf.default.disable_ipv6 = 1
-net.ipv6.conf.lo.disable_ipv6 = 1
-Creating directories...
-Reloading systemd daemon...
-=== Installation completed successfully ===
+Last login: Wed Nov  5 09:37:04 2025 from 113.189.109.248
+root@vmi2881987:~# Last login: Wed Nov  5 15:36:25 on ttys000
+exchange@Mysteriouss-Air ~ % ssh root@195.26.255.18
+root@195.26.255.18's password: 
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-160-generic x86_64)
 
-⚠️  SECURITY WARNING ⚠️
-Default passwords in config/users.csv and config/control.password are WEAK!
-For production use, generate strong passwords:
-  openssl rand -base64 32 > /opt/tor-socks-farm/config/control.password
-  for i in {1..50}; do PASS=$(openssl rand -base64 16); printf "%03d,user%03d,%s\n" $i $i "$PASS"; done > /opt/tor-socks-farm/config/users.csv.new
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
 
-Next steps:
-  1. Run: bash /opt/tor-socks-farm/scripts/deploy_tor_instances.sh 50
-  2. Run: bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
-  3. Run: bash /opt/tor-socks-farm/scripts/enable_rotation.sh
-  4. Run: bash /opt/tor-socks-farm/firewall/hardening.sh
-root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/deploy_tor_instances.sh 50
-=== Deploying 50 Tor instances ===
-Deploying instance 001 (SOCKS: 9001, Control: 9101)...
-Deploying instance 002 (SOCKS: 9002, Control: 9102)...
-Deploying instance 003 (SOCKS: 9003, Control: 9103)...
-Deploying instance 004 (SOCKS: 9004, Control: 9104)...
-Deploying instance 005 (SOCKS: 9005, Control: 9105)...
-Deploying instance 006 (SOCKS: 9006, Control: 9106)...
-Deploying instance 007 (SOCKS: 9007, Control: 9107)...
-/opt/tor-socks-farm/scripts/deploy_tor_instances.sh: line 30: printf: 008: invalid octal number
-root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
+ System information as of Wed Nov  5 09:37:02 CET 2025
+
+  System load:  0.0                Processes:             164
+  Usage of /:   0.7% of 387.48GB   Users logged in:       0
+  Memory usage: 2%                 IPv4 address for eth0: 195.26.255.18
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+root@vmi2881987:/opt/tor-socks-farm/scripts# points.sh: line 42: 10##: invalid i
+Command 'Last' not found, did you mean:
+  command 'last' from deb util-linux (2.37.2-4ubuntu3.4)
+  command 'nast' from deb nast (0.2.0-9)
+Try: apt install <deb name>
+exchange@Mysteriouss-Air: command not found
+-bash: root@195.26.255.18s password: 
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-160-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Nov  5 09:37:02 CET 2025
+
+  System load:  0.0                Processes:             164
+  Usage of /:   0.7% of 387.48GB   Users logged in:       0
+  Memory usage: 2%                 IPv4 address for eth0: 195.26.255.18
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+New release 24.04.3: No such file or directory
+Command 'Last' not found, did you mean:
+  command 'last' from deb util-linux (2.37.2-4ubuntu3.4)
+  command 'nast' from deb nast (0.2.0-9)
+Try: apt install <deb name>
+root@vmi2881987:~#: command not found
+--2025-11-05 09:58:18--  https://raw.githubusercontent.com/mrolivershea-cyber/Proxy-Good/copilot/update-documentation-for-project/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.108.133, 185.199.108.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2573 (2.5K) [text/plain]
+Saving to: ‘deploy_3proxy_endpoints.sh’
+
+deploy_3proxy_endpo 100%[===================>]   2.51K  --.-KB/s    in 0s      
+
+2025-11-05 09:58:18 (10.6 MB/s) - ‘deploy_3proxy_endpoints.sh’ saved [2573/2573]
+
+--2025-11-05 09:58:18--  https://raw.githubusercontent.com/mrolivershea-cyber/Proxy-Good/copilot/update-documentation-for-project/opt/tor-socks-farm/scripts/deploy_tor_instances.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.108.133, 185.199.108.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2719 (2.7K) [text/plain]
+Saving to: ‘deploy_tor_instances.sh’
+
+deploy_tor_instance 100%[===================>]   2.66K  --.-KB/s    in 0s      
+
+2025-11-05 09:58:18 (23.5 MB/s) - ‘deploy_tor_instances.sh’ saved [2719/2719]
+
+--2025-11-05 09:58:18--  https://raw.githubusercontent.com/mrolivershea-cyber/Proxy-Good/copilot/update-documentation-for-project/opt/tor-socks-farm/scripts/rotate.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.108.133, 185.199.108.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1895 (1.9K) [text/plain]
+Saving to: ‘rotate.sh’
+
+rotate.sh           100%[===================>]   1.85K  --.-KB/s    in 0s      
+
+2025-11-05 09:58:19 (18.1 MB/s) - ‘rotate.sh’ saved [1895/1895]
+
 === Deploying 50 3proxy endpoints ===
-/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 41: BASE_SOCKS_PORT + 10##: invalid integer constant (error token is "10##")
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
 
 === Verifying endpoints ===
 ✗ Endpoint 001 failed to start
@@ -99,63 +148,983 @@ root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints
 ✗ Endpoint 005 failed to start
 ✗ Endpoint 006 failed to start
 ✗ Endpoint 007 failed to start
-/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 49: printf: 008: invalid octal number
-root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/enable_rotation.sh
-=== Enabling Tor Identity Rotation ===
-Setting rotation interval to 30 minutes...
-Created symlink /etc/systemd/system/timers.target.wants/rotate.timer → /etc/systemd/system/rotate.timer.
+✗ Endpoint 008 failed to start
+✗ Endpoint 009 failed to start
+✗ Endpoint 010 failed to start
+✗ Endpoint 011 failed to start
+✗ Endpoint 012 failed to start
+✗ Endpoint 013 failed to start
+✗ Endpoint 014 failed to start
+✗ Endpoint 015 failed to start
+✗ Endpoint 016 failed to start
+✗ Endpoint 017 failed to start
+✗ Endpoint 018 failed to start
+✗ Endpoint 019 failed to start
+✗ Endpoint 020 failed to start
+✗ Endpoint 021 failed to start
+✗ Endpoint 022 failed to start
+✗ Endpoint 023 failed to start
+✗ Endpoint 024 failed to start
+✗ Endpoint 025 failed to start
+✗ Endpoint 026 failed to start
+✗ Endpoint 027 failed to start
+✗ Endpoint 028 failed to start
+✗ Endpoint 029 failed to start
+✗ Endpoint 030 failed to start
+✗ Endpoint 031 failed to start
+✗ Endpoint 032 failed to start
+✗ Endpoint 033 failed to start
+✗ Endpoint 034 failed to start
+✗ Endpoint 035 failed to start
+✗ Endpoint 036 failed to start
+✗ Endpoint 037 failed to start
+✗ Endpoint 038 failed to start
+✗ Endpoint 039 failed to start
+✗ Endpoint 040 failed to start
+✗ Endpoint 041 failed to start
+✗ Endpoint 042 failed to start
+✗ Endpoint 043 failed to start
+✗ Endpoint 044 failed to start
+✗ Endpoint 045 failed to start
+✗ Endpoint 046 failed to start
+✗ Endpoint 047 failed to start
+✗ Endpoint 048 failed to start
+✗ Endpoint 049 failed to start
+✗ Endpoint 050 failed to start
 
-=== Rotation timer enabled successfully ===
-Rotation interval: 30 minutes
-First rotation: 5 minutes after boot
+WARNING: 50 endpoints failed to start
+Check logs with: journalctl -u 3proxy@NNN
+--2025-11-05: command not found
+-bash: syntax error near unexpected token `('
+-bash: syntax error near unexpected token `('
+HTTP: command not found
+-bash: syntax error near unexpected token `('
+Saving: command not found
+deploy_3proxy_endpo: command not found
+-bash: syntax error near unexpected token `('
+--2025-11-05: command not found
+-bash: syntax error near unexpected token `('
+-bash: syntax error near unexpected token `('
+HTTP: command not found
+-bash: syntax error near unexpected token `('
+Saving: command not found
+deploy_tor_instance: command not found
+-bash: syntax error near unexpected token `('
+--2025-11-05: command not found
+-bash: syntax error near unexpected token `('
+-bash: syntax error near unexpected token `('
+HTTP: command not found
+-bash: syntax error near unexpected token `('
+Saving: command not found
+rotate.sh: command not found
+-bash: syntax error near unexpected token `('
+===: command not found
+-bash: syntax error near unexpected token `('
+===: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+✗: command not found
+WARNING:: command not found
+^C-bash: root@vmi2881987:/opt/tor-socks-farm/scripts#: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl list-units '3proxy@*' --all
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+0 loaded units listed.
+To show all installed unit files use 'systemctl list-unit-files'.
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u '3proxy@001' -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /etc/3proxy/3proxy-001.cfg
+cat: /etc/3proxy/3proxy-001.cfg: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# 3proxy /etc/3proxy/3proxy-001.cfg
+^C
+root@vmi2881987:/opt/tor-socks-farm/scripts# ls -la /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+-rwxr-xr-x 1 root root 2573 Nov  5 09:58 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+root@vmi2881987:/opt/tor-socks-farm/scripts# sed -n '35,45p' /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl list-units '3proxy@*' --all
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+0 loaded units listed.
+To show all installed unit files use 'systemctl list-unit-files'.
+root@vmi2881987:/opt/tor-socks-farm/scripts# 
+root@vmi2881987:/opt/tor-socks-farm/scripts# ^C
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u '3proxy@001' -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/config/3proxy/endpoint-001.cfg
+cat: /opt/tor-socks-farm/config/3proxy/endpoint-001.cfg: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -60
+#!/bin/bash
+set -e
 
-Check timer status with: systemctl status rotate.timer
-Check rotation logs with: journalctl -u rotate.service
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
 
-To manually trigger rotation now, run:
-  systemctl start rotate.service
-root@vmi2881987:~# sudo bash /opt/tor-socks-farm/firewall/hardening.sh
-=== Applying Security Hardening ===
-Applying Tor iptables rules...
-=== Applying Tor-specific iptables rules ===
-Creating backup: /root/iptables.backup.1762313852
-Tor UID: 113
-Blocking DNS queries from non-Tor processes...
-✓ DNS isolation rules applied
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
 
-=== iptables rules applied successfully ===
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
 
-Backup saved to: /root/iptables.backup.1762313852
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
 
-To rollback these changes, run:
-  iptables-restore < /root/iptables.backup.1762313852
+echo "=== Deploying $COUNT 3proxy endpoints ==="
 
-Current OUTPUT rules:
-Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
-num   pkts bytes target     prot opt in     out     source               destination         
-1        0     0 REJECT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:53 ! owner UID match 113 reject-with icmp-port-unreachable
-2        0     0 REJECT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:53 ! owner UID match 113 reject-with icmp-port-unreachable
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
 
-=== Security Hardening Summary ===
-✓ DNS isolation: Only debian-tor user can make DNS queries
-✓ IPv6 disabled: Prevents IPv6 leaks
-✓ Tor instances: Bound to 127.0.0.1 only
-✓ 3proxy authentication: Required for all connections
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+  CONFIG="${CONFIG//__USER__/$user}"
+  CONFIG="${CONFIG//__PASSWORD__/$password}"
+  CONFIG="${CONFIG//__PUBLIC_PORT__/$PUBLIC_PORT}"
+  CONFIG="${CONFIG//__LOCAL_SOCKS__/$LOCAL_SOCKS}"
+  
+  # Write configuration
+  echo "$CONFIG" > /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chown proxy:proxy /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chmod 640 /etc/3proxy/instance$INSTANCE_NUM.cfg
+  
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash -x /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50 2>&1 | head -100
 
-Security hardening completed successfully!
-root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/deploy_tor_instances.sh 50
-=== Deploying 50 Tor instances ===
-Deploying instance 001 (SOCKS: 9001, Control: 9101)...
-Deploying instance 002 (SOCKS: 9002, Control: 9102)...
-Deploying instance 003 (SOCKS: 9003, Control: 9103)...
-Deploying instance 004 (SOCKS: 9004, Control: 9104)...
-Deploying instance 005 (SOCKS: 9005, Control: 9105)...
-Deploying instance 006 (SOCKS: 9006, Control: 9106)...
-Deploying instance 007 (SOCKS: 9007, Control: 9107)...
-/opt/tor-socks-farm/scripts/deploy_tor_instances.sh: line 30: printf: 008: invalid octal number
-root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
++ set -e
++ '[' 0 -ne 0 ']'
++ source /opt/tor-socks-farm/config/torfarm.env
+++ MIN_INSTANCES=50
+++ MAX_INSTANCES=500
+++ BASE_SOCKS_PORT=9000
+++ BASE_CTRL_PORT=9100
+++ BASE_DNS_PORT=9200
+++ BASE_TRANS_PORT=9300
+++ BASE_PUBLIC_PORT=20000
+++ ROTATE_EVERY_MIN=30
+++ DEFAULT_COUNTRY='*'
++ COUNT=50
++ '[' 50 -gt 500 ']'
++ echo '=== Deploying 50 3proxy endpoints ==='
 === Deploying 50 3proxy endpoints ===
-/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 41: BASE_SOCKS_PORT + 10##: invalid integer constant (error token is "10##")
+++ cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl
++ TEMPLATE='# 3proxy configuration template for instance __INSTANCE__
+# This template will be populated by deploy_3proxy_endpoints.sh
+
+auth strong
+users __USER__:CL:__PASSWORD__
+socks -p__PUBLIC_PORT__ -a
+parent 1000 socks5 127.0.0.1 __LOCAL_SOCKS__'
++ DEPLOYED=0
++ IFS=,
++ read -r instance user password
++ '[' '# WARNING: These are DEFAULT credentials for testing only!' = instance ']'
++ '[' 0 -ge 50 ']'
++ INSTANCE_NUM='# WARNING: These are DEFAULT credentials for testing only!'
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
++ echo ''
+
++ echo '=== Verifying endpoints ==='
+=== Verifying endpoints ===
++ FAILED=0
+++ seq 1 50
++ for i in $(seq 1 $COUNT)
+++ printf %03d 1
++ INSTANCE_NUM=001
++ systemctl is-active --quiet 3proxy@001
++ echo '✗ Endpoint 001 failed to start'
+✗ Endpoint 001 failed to start
++ FAILED=1
++ for i in $(seq 1 $COUNT)
+++ printf %03d 2
++ INSTANCE_NUM=002
++ systemctl is-active --quiet 3proxy@002
++ echo '✗ Endpoint 002 failed to start'
+✗ Endpoint 002 failed to start
++ FAILED=2
++ for i in $(seq 1 $COUNT)
+++ printf %03d 3
++ INSTANCE_NUM=003
++ systemctl is-active --quiet 3proxy@003
++ echo '✗ Endpoint 003 failed to start'
+✗ Endpoint 003 failed to start
++ FAILED=3
++ for i in $(seq 1 $COUNT)
+++ printf %03d 4
++ INSTANCE_NUM=004
++ systemctl is-active --quiet 3proxy@004
++ echo '✗ Endpoint 004 failed to start'
+✗ Endpoint 004 failed to start
++ FAILED=4
++ for i in $(seq 1 $COUNT)
+++ printf %03d 5
++ INSTANCE_NUM=005
++ systemctl is-active --quiet 3proxy@005
++ echo '✗ Endpoint 005 failed to start'
+✗ Endpoint 005 failed to start
++ FAILED=5
++ for i in $(seq 1 $COUNT)
+++ printf %03d 6
++ INSTANCE_NUM=006
++ systemctl is-active --quiet 3proxy@006
++ echo '✗ Endpoint 006 failed to start'
+✗ Endpoint 006 failed to start
++ FAILED=6
++ for i in $(seq 1 $COUNT)
+++ printf %03d 7
++ INSTANCE_NUM=007
++ systemctl is-active --quiet 3proxy@007
++ echo '✗ Endpoint 007 failed to start'
+✗ Endpoint 007 failed to start
++ FAILED=7
++ for i in $(seq 1 $COUNT)
+++ printf %03d 8
++ INSTANCE_NUM=008
++ systemctl is-active --quiet 3proxy@008
++ echo '✗ Endpoint 008 failed to start'
+✗ Endpoint 008 failed to start
++ FAILED=8
++ for i in $(seq 1 $COUNT)
+++ printf %03d 9
++ INSTANCE_NUM=009
++ systemctl is-active --quiet 3proxy@009
++ echo '✗ Endpoint 009 failed to start'
+✗ Endpoint 009 failed to start
++ FAILED=9
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' | head -50
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/config/3proxy/001.cfg
+cat: /opt/tor-socks-farm/config/3proxy/001.cfg: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u 3proxy@001 -n 30 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# ls -lh /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+-rwxr-xr-x 1 root root 2.6K Nov  5 09:58 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+root@vmi2881987:/opt/tor-socks-farm/scripts# head -n 50 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash -x /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 10 2>&1 | head -n 100
++ set -e
++ '[' 0 -ne 0 ']'
++ source /opt/tor-socks-farm/config/torfarm.env
+++ MIN_INSTANCES=50
+++ MAX_INSTANCES=500
+++ BASE_SOCKS_PORT=9000
+++ BASE_CTRL_PORT=9100
+++ BASE_DNS_PORT=9200
+++ BASE_TRANS_PORT=9300
+++ BASE_PUBLIC_PORT=20000
+++ ROTATE_EVERY_MIN=30
+++ DEFAULT_COUNTRY='*'
++ COUNT=10
++ '[' 10 -gt 500 ']'
++ echo '=== Deploying 10 3proxy endpoints ==='
+=== Deploying 10 3proxy endpoints ===
+++ cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl
++ TEMPLATE='# 3proxy configuration template for instance __INSTANCE__
+# This template will be populated by deploy_3proxy_endpoints.sh
+
+auth strong
+users __USER__:CL:__PASSWORD__
+socks -p__PUBLIC_PORT__ -a
+parent 1000 socks5 127.0.0.1 __LOCAL_SOCKS__'
++ DEPLOYED=0
++ IFS=,
++ read -r instance user password
++ '[' '# WARNING: These are DEFAULT credentials for testing only!' = instance ']'
++ '[' 0 -ge 10 ']'
++ INSTANCE_NUM='# WARNING: These are DEFAULT credentials for testing only!'
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
++ echo ''
+
++ echo '=== Verifying endpoints ==='
+=== Verifying endpoints ===
++ FAILED=0
+++ seq 1 10
++ for i in $(seq 1 $COUNT)
+++ printf %03d 1
++ INSTANCE_NUM=001
++ systemctl is-active --quiet 3proxy@001
++ echo '✗ Endpoint 001 failed to start'
+✗ Endpoint 001 failed to start
++ FAILED=1
++ for i in $(seq 1 $COUNT)
+++ printf %03d 2
++ INSTANCE_NUM=002
++ systemctl is-active --quiet 3proxy@002
++ echo '✗ Endpoint 002 failed to start'
+✗ Endpoint 002 failed to start
++ FAILED=2
++ for i in $(seq 1 $COUNT)
+++ printf %03d 3
++ INSTANCE_NUM=003
++ systemctl is-active --quiet 3proxy@003
++ echo '✗ Endpoint 003 failed to start'
+✗ Endpoint 003 failed to start
++ FAILED=3
++ for i in $(seq 1 $COUNT)
+++ printf %03d 4
++ INSTANCE_NUM=004
++ systemctl is-active --quiet 3proxy@004
++ echo '✗ Endpoint 004 failed to start'
+✗ Endpoint 004 failed to start
++ FAILED=4
++ for i in $(seq 1 $COUNT)
+++ printf %03d 5
++ INSTANCE_NUM=005
++ systemctl is-active --quiet 3proxy@005
++ echo '✗ Endpoint 005 failed to start'
+✗ Endpoint 005 failed to start
++ FAILED=5
++ for i in $(seq 1 $COUNT)
+++ printf %03d 6
++ INSTANCE_NUM=006
++ systemctl is-active --quiet 3proxy@006
++ echo '✗ Endpoint 006 failed to start'
+✗ Endpoint 006 failed to start
++ FAILED=6
++ for i in $(seq 1 $COUNT)
+++ printf %03d 7
++ INSTANCE_NUM=007
++ systemctl is-active --quiet 3proxy@007
++ echo '✗ Endpoint 007 failed to start'
+✗ Endpoint 007 failed to start
++ FAILED=7
++ for i in $(seq 1 $COUNT)
+++ printf %03d 8
++ INSTANCE_NUM=008
++ systemctl is-active --quiet 3proxy@008
++ echo '✗ Endpoint 008 failed to start'
+✗ Endpoint 008 failed to start
++ FAILED=8
++ for i in $(seq 1 $COUNT)
+++ printf %03d 9
++ INSTANCE_NUM=009
++ systemctl is-active --quiet 3proxy@009
++ echo '✗ Endpoint 009 failed to start'
+✗ Endpoint 009 failed to start
++ FAILED=9
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' | head -n 50
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u '3proxy@001' -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -50
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash -x /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 5 2>&1 | head -100
++ set -e
++ '[' 0 -ne 0 ']'
++ source /opt/tor-socks-farm/config/torfarm.env
+++ MIN_INSTANCES=50
+++ MAX_INSTANCES=500
+++ BASE_SOCKS_PORT=9000
+++ BASE_CTRL_PORT=9100
+++ BASE_DNS_PORT=9200
+++ BASE_TRANS_PORT=9300
+++ BASE_PUBLIC_PORT=20000
+++ ROTATE_EVERY_MIN=30
+++ DEFAULT_COUNTRY='*'
++ COUNT=5
++ '[' 5 -gt 500 ']'
++ echo '=== Deploying 5 3proxy endpoints ==='
+=== Deploying 5 3proxy endpoints ===
+++ cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl
++ TEMPLATE='# 3proxy configuration template for instance __INSTANCE__
+# This template will be populated by deploy_3proxy_endpoints.sh
+
+auth strong
+users __USER__:CL:__PASSWORD__
+socks -p__PUBLIC_PORT__ -a
+parent 1000 socks5 127.0.0.1 __LOCAL_SOCKS__'
++ DEPLOYED=0
++ IFS=,
++ read -r instance user password
++ '[' '# WARNING: These are DEFAULT credentials for testing only!' = instance ']'
++ '[' 0 -ge 5 ']'
++ INSTANCE_NUM='# WARNING: These are DEFAULT credentials for testing only!'
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
++ echo ''
+
++ echo '=== Verifying endpoints ==='
+=== Verifying endpoints ===
++ FAILED=0
+++ seq 1 5
++ for i in $(seq 1 $COUNT)
+++ printf %03d 1
++ INSTANCE_NUM=001
++ systemctl is-active --quiet 3proxy@001
++ echo '✗ Endpoint 001 failed to start'
+✗ Endpoint 001 failed to start
++ FAILED=1
++ for i in $(seq 1 $COUNT)
+++ printf %03d 2
++ INSTANCE_NUM=002
++ systemctl is-active --quiet 3proxy@002
++ echo '✗ Endpoint 002 failed to start'
+✗ Endpoint 002 failed to start
++ FAILED=2
++ for i in $(seq 1 $COUNT)
+++ printf %03d 3
++ INSTANCE_NUM=003
++ systemctl is-active --quiet 3proxy@003
++ echo '✗ Endpoint 003 failed to start'
+✗ Endpoint 003 failed to start
++ FAILED=3
++ for i in $(seq 1 $COUNT)
+++ printf %03d 4
++ INSTANCE_NUM=004
++ systemctl is-active --quiet 3proxy@004
++ echo '✗ Endpoint 004 failed to start'
+✗ Endpoint 004 failed to start
++ FAILED=4
++ for i in $(seq 1 $COUNT)
+++ printf %03d 5
++ INSTANCE_NUM=005
++ systemctl is-active --quiet 3proxy@005
++ echo '✗ Endpoint 005 failed to start'
+✗ Endpoint 005 failed to start
++ FAILED=5
++ '[' 5 -eq 0 ']'
++ echo ''
+
++ echo 'WARNING: 5 endpoints failed to start'
+WARNING: 5 endpoints failed to start
++ echo 'Check logs with: journalctl -u 3proxy@NNN'
+Check logs with: journalctl -u 3proxy@NNN
++ exit 1
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' --no-pager | head -50
+
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u '3proxy@001' -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/config/3proxy/001.cfg 2>/dev/null || echo "Файл не найден"
+Файл не найден
+root@vmi2881987:/opt/tor-socks-farm/scripts# head -50 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' | head -30
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u 3proxy@001 -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/3proxy/001.cfg
+cat: /opt/tor-socks-farm/3proxy/001.cfg: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# ss -tlnp | grep -E ':(9001|20001)'
+LISTEN 0      4096       127.0.0.1:9001      0.0.0.0:*    users:(("tor",pid=13236,fd=6))           
+root@vmi2881987:/opt/tor-socks-farm/scripts# ls -la /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -50
+
+-rwxr-xr-x 1 root root 2573 Nov  5 09:58 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash -x /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50 2>&1 | head -100
++ set -e
++ '[' 0 -ne 0 ']'
++ source /opt/tor-socks-farm/config/torfarm.env
+++ MIN_INSTANCES=50
+++ MAX_INSTANCES=500
+++ BASE_SOCKS_PORT=9000
+++ BASE_CTRL_PORT=9100
+++ BASE_DNS_PORT=9200
+++ BASE_TRANS_PORT=9300
+++ BASE_PUBLIC_PORT=20000
+++ ROTATE_EVERY_MIN=30
+++ DEFAULT_COUNTRY='*'
++ COUNT=50
++ '[' 50 -gt 500 ']'
++ echo '=== Deploying 50 3proxy endpoints ==='
+=== Deploying 50 3proxy endpoints ===
+++ cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl
++ TEMPLATE='# 3proxy configuration template for instance __INSTANCE__
+# This template will be populated by deploy_3proxy_endpoints.sh
+
+auth strong
+users __USER__:CL:__PASSWORD__
+socks -p__PUBLIC_PORT__ -a
+parent 1000 socks5 127.0.0.1 __LOCAL_SOCKS__'
++ DEPLOYED=0
++ IFS=,
++ read -r instance user password
++ '[' '# WARNING: These are DEFAULT credentials for testing only!' = instance ']'
++ '[' 0 -ge 50 ']'
++ INSTANCE_NUM='# WARNING: These are DEFAULT credentials for testing only!'
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
++ echo ''
+
++ echo '=== Verifying endpoints ==='
+=== Verifying endpoints ===
++ FAILED=0
+++ seq 1 50
++ for i in $(seq 1 $COUNT)
+++ printf %03d 1
++ INSTANCE_NUM=001
++ systemctl is-active --quiet 3proxy@001
++ echo '✗ Endpoint 001 failed to start'
+✗ Endpoint 001 failed to start
++ FAILED=1
++ for i in $(seq 1 $COUNT)
+++ printf %03d 2
++ INSTANCE_NUM=002
++ systemctl is-active --quiet 3proxy@002
++ echo '✗ Endpoint 002 failed to start'
+✗ Endpoint 002 failed to start
++ FAILED=2
++ for i in $(seq 1 $COUNT)
+++ printf %03d 3
++ INSTANCE_NUM=003
++ systemctl is-active --quiet 3proxy@003
++ echo '✗ Endpoint 003 failed to start'
+✗ Endpoint 003 failed to start
++ FAILED=3
++ for i in $(seq 1 $COUNT)
+++ printf %03d 4
++ INSTANCE_NUM=004
++ systemctl is-active --quiet 3proxy@004
++ echo '✗ Endpoint 004 failed to start'
+✗ Endpoint 004 failed to start
++ FAILED=4
++ for i in $(seq 1 $COUNT)
+++ printf %03d 5
++ INSTANCE_NUM=005
++ systemctl is-active --quiet 3proxy@005
++ echo '✗ Endpoint 005 failed to start'
+✗ Endpoint 005 failed to start
++ FAILED=5
++ for i in $(seq 1 $COUNT)
+++ printf %03d 6
++ INSTANCE_NUM=006
++ systemctl is-active --quiet 3proxy@006
++ echo '✗ Endpoint 006 failed to start'
+✗ Endpoint 006 failed to start
++ FAILED=6
++ for i in $(seq 1 $COUNT)
+++ printf %03d 7
++ INSTANCE_NUM=007
++ systemctl is-active --quiet 3proxy@007
++ echo '✗ Endpoint 007 failed to start'
+✗ Endpoint 007 failed to start
++ FAILED=7
++ for i in $(seq 1 $COUNT)
+++ printf %03d 8
++ INSTANCE_NUM=008
++ systemctl is-active --quiet 3proxy@008
++ echo '✗ Endpoint 008 failed to start'
+✗ Endpoint 008 failed to start
++ FAILED=8
++ for i in $(seq 1 $COUNT)
+++ printf %03d 9
++ INSTANCE_NUM=009
++ systemctl is-active --quiet 3proxy@009
++ echo '✗ Endpoint 009 failed to start'
+✗ Endpoint 009 failed to start
++ FAILED=9
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' | head -50
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u 3proxy@001 -n 20 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status 'tor@*' | grep -E "(Loaded|Active)" | head -20
+     Loaded: loaded (/lib/systemd/system/tor@default.service; enabled-runtime; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:22:40 CET; 5h 39min ago
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:56:48 CET; 5h 5min ago
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:56:51 CET; 5h 5min ago
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:56:50 CET; 5h 5min ago
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:56:52 CET; 5h 5min ago
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:56:49 CET; 5h 5min ago
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:56:48 CET; 5h 5min ago
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:56:47 CET; 5h 5min ago
+root@vmi2881987:/opt/tor-socks-farm/scripts# head -50 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' | grep -E "(Loaded|Active)" | head -20
+root@vmi2881987:/opt/tor-socks-farm/scripts# ls -la /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+-rwxr-xr-x 1 root root 2573 Nov  5 09:58 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | grep -A5 "INSTANCE_NUM="
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+--
+  INSTANCE_NUM=$(printf "%03d" $i)
+  if systemctl is-active --quiet 3proxy@$INSTANCE_NUM; then
+    echo "✓ Endpoint $INSTANCE_NUM is active"
+  else
+    echo "✗ Endpoint $INSTANCE_NUM failed to start"
+    FAILED=$((FAILED + 1))
+root@vmi2881987:/opt/tor-socks-farm/scripts# head -n 50 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
+=== Deploying 50 3proxy endpoints ===
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
 
 === Verifying endpoints ===
 ✗ Endpoint 001 failed to start
@@ -165,219 +1134,1284 @@ root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints
 ✗ Endpoint 005 failed to start
 ✗ Endpoint 006 failed to start
 ✗ Endpoint 007 failed to start
-/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 49: printf: 008: invalid octal number
-root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/enable_rotation.sh
-=== Enabling Tor Identity Rotation ===
-Setting rotation interval to 30 minutes...
+✗ Endpoint 008 failed to start
+✗ Endpoint 009 failed to start
+✗ Endpoint 010 failed to start
+✗ Endpoint 011 failed to start
+✗ Endpoint 012 failed to start
+✗ Endpoint 013 failed to start
+✗ Endpoint 014 failed to start
+✗ Endpoint 015 failed to start
+✗ Endpoint 016 failed to start
+✗ Endpoint 017 failed to start
+✗ Endpoint 018 failed to start
+✗ Endpoint 019 failed to start
+✗ Endpoint 020 failed to start
+✗ Endpoint 021 failed to start
+✗ Endpoint 022 failed to start
+✗ Endpoint 023 failed to start
+✗ Endpoint 024 failed to start
+✗ Endpoint 025 failed to start
+✗ Endpoint 026 failed to start
+✗ Endpoint 027 failed to start
+✗ Endpoint 028 failed to start
+✗ Endpoint 029 failed to start
+✗ Endpoint 030 failed to start
+✗ Endpoint 031 failed to start
+✗ Endpoint 032 failed to start
+✗ Endpoint 033 failed to start
+✗ Endpoint 034 failed to start
+✗ Endpoint 035 failed to start
+✗ Endpoint 036 failed to start
+✗ Endpoint 037 failed to start
+✗ Endpoint 038 failed to start
+✗ Endpoint 039 failed to start
+✗ Endpoint 040 failed to start
+✗ Endpoint 041 failed to start
+✗ Endpoint 042 failed to start
+✗ Endpoint 043 failed to start
+✗ Endpoint 044 failed to start
+✗ Endpoint 045 failed to start
+✗ Endpoint 046 failed to start
+✗ Endpoint 047 failed to start
+✗ Endpoint 048 failed to start
+✗ Endpoint 049 failed to start
+✗ Endpoint 050 failed to start
 
-=== Rotation timer enabled successfully ===
-Rotation interval: 30 minutes
-First rotation: 5 minutes after boot
+WARNING: 50 endpoints failed to start
+Check logs with: journalctl -u 3proxy@NNN
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@001' --no-pager
+○ 3proxy@001.service - 3proxy endpoint 001
+     Loaded: loaded (/etc/systemd/system/3proxy@.service; disabled; vendor preset: enabled)
+     Active: inactive (dead)
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u 3proxy@001 -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /etc/3proxy/3proxy_001.cfg
+cat: /etc/3proxy/3proxy_001.cfg: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# ls -lah /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh /opt/tor-socks-farm/scripts/deploy_tor_instances.sh /opt/tor-socks-farm/scripts/rotate.sh
+-rwxr-xr-x 1 root root 2.6K Nov  5 09:58 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+-rwxr-xr-x 1 root root 2.7K Nov  5 09:58 /opt/tor-socks-farm/scripts/deploy_tor_instances.sh
+-rwxr-xr-x 1 root root 1.9K Nov  5 09:58 /opt/tor-socks-farm/scripts/rotate.sh
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50 2>&1
+=== Deploying 50 3proxy endpoints ===
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
 
-Check timer status with: systemctl status rotate.timer
-Check rotation logs with: journalctl -u rotate.service
+=== Verifying endpoints ===
+✗ Endpoint 001 failed to start
+✗ Endpoint 002 failed to start
+✗ Endpoint 003 failed to start
+✗ Endpoint 004 failed to start
+✗ Endpoint 005 failed to start
+✗ Endpoint 006 failed to start
+✗ Endpoint 007 failed to start
+✗ Endpoint 008 failed to start
+✗ Endpoint 009 failed to start
+✗ Endpoint 010 failed to start
+✗ Endpoint 011 failed to start
+✗ Endpoint 012 failed to start
+✗ Endpoint 013 failed to start
+✗ Endpoint 014 failed to start
+✗ Endpoint 015 failed to start
+✗ Endpoint 016 failed to start
+✗ Endpoint 017 failed to start
+✗ Endpoint 018 failed to start
+✗ Endpoint 019 failed to start
+✗ Endpoint 020 failed to start
+✗ Endpoint 021 failed to start
+✗ Endpoint 022 failed to start
+✗ Endpoint 023 failed to start
+✗ Endpoint 024 failed to start
+✗ Endpoint 025 failed to start
+✗ Endpoint 026 failed to start
+✗ Endpoint 027 failed to start
+✗ Endpoint 028 failed to start
+✗ Endpoint 029 failed to start
+✗ Endpoint 030 failed to start
+✗ Endpoint 031 failed to start
+✗ Endpoint 032 failed to start
+✗ Endpoint 033 failed to start
+✗ Endpoint 034 failed to start
+✗ Endpoint 035 failed to start
+✗ Endpoint 036 failed to start
+✗ Endpoint 037 failed to start
+✗ Endpoint 038 failed to start
+✗ Endpoint 039 failed to start
+✗ Endpoint 040 failed to start
+✗ Endpoint 041 failed to start
+✗ Endpoint 042 failed to start
+✗ Endpoint 043 failed to start
+✗ Endpoint 044 failed to start
+✗ Endpoint 045 failed to start
+✗ Endpoint 046 failed to start
+✗ Endpoint 047 failed to start
+✗ Endpoint 048 failed to start
+✗ Endpoint 049 failed to start
+✗ Endpoint 050 failed to start
 
-To manually trigger rotation now, run:
-  systemctl start rotate.service
-root@vmi2881987:~# sudo bash /opt/tor-socks-farm/firewall/hardening.sh
-=== Applying Security Hardening ===
-Applying Tor iptables rules...
-=== Applying Tor-specific iptables rules ===
-Creating backup: /root/iptables.backup.1762314503
-Tor UID: 113
-Blocking DNS queries from non-Tor processes...
-✓ DNS isolation rules applied
+WARNING: 50 endpoints failed to start
+Check logs with: journalctl -u 3proxy@NNN
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl list-units '3proxy@*' --all
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+0 loaded units listed.
+To show all installed unit files use 'systemctl list-unit-files'.
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u 3proxy@001.service -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# ss -tlnp | grep -E ':(20001|20002|20003|20004|20005)'
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -50
+#!/bin/bash
+set -e
 
-=== iptables rules applied successfully ===
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
 
-Backup saved to: /root/iptables.backup.1762314503
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
 
-To rollback these changes, run:
-  iptables-restore < /root/iptables.backup.1762314503
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
 
-Current OUTPUT rules:
-Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
-num   pkts bytes target     prot opt in     out     source               destination         
-1        0     0 REJECT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:53 ! owner UID match 113 reject-with icmp-port-unreachable
-2        0     0 REJECT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:53 ! owner UID match 113 reject-with icmp-port-unreachable
-3        0     0 REJECT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:53 ! owner UID match 113 reject-with icmp-port-unreachable
-4        0     0 REJECT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:53 ! owner UID match 113 reject-with icmp-port-unreachable
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
 
-=== Security Hardening Summary ===
-✓ DNS isolation: Only debian-tor user can make DNS queries
-✓ IPv6 disabled: Prevents IPv6 leaks
-✓ Tor instances: Bound to 127.0.0.1 only
-✓ 3proxy authentication: Required for all connections
+echo "=== Deploying $COUNT 3proxy endpoints ==="
 
-Security hardening completed successfully!
-root@vmi2881987:~# curl -x ******localhost:20001 https://api.ipify.org
-curl: (5) Could not resolve proxy: ******localhost
-root@vmi2881987:~# systemctl status 'tor@*'
-● tor@default.service - Anonymizing overlay network for TCP
-     Loaded: loaded (/lib/systemd/system/tor@default.service; enabled-runtime; >
-     Active: active (running) since Wed 2025-11-05 04:22:40 CET; 25min ago
-   Main PID: 10003 (tor)
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+root@vmi2881987:/opt/tor-socks-farm/scripts# bash -x /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 5 2>&1 | head -100
++ set -e
++ '[' 0 -ne 0 ']'
++ source /opt/tor-socks-farm/config/torfarm.env
+++ MIN_INSTANCES=50
+++ MAX_INSTANCES=500
+++ BASE_SOCKS_PORT=9000
+++ BASE_CTRL_PORT=9100
+++ BASE_DNS_PORT=9200
+++ BASE_TRANS_PORT=9300
+++ BASE_PUBLIC_PORT=20000
+++ ROTATE_EVERY_MIN=30
+++ DEFAULT_COUNTRY='*'
++ COUNT=5
++ '[' 5 -gt 500 ']'
++ echo '=== Deploying 5 3proxy endpoints ==='
+=== Deploying 5 3proxy endpoints ===
+++ cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl
++ TEMPLATE='# 3proxy configuration template for instance __INSTANCE__
+# This template will be populated by deploy_3proxy_endpoints.sh
+
+auth strong
+users __USER__:CL:__PASSWORD__
+socks -p__PUBLIC_PORT__ -a
+parent 1000 socks5 127.0.0.1 __LOCAL_SOCKS__'
++ DEPLOYED=0
++ IFS=,
++ read -r instance user password
++ '[' '# WARNING: These are DEFAULT credentials for testing only!' = instance ']'
++ '[' 0 -ge 5 ']'
++ INSTANCE_NUM='# WARNING: These are DEFAULT credentials for testing only!'
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
++ echo ''
+
++ echo '=== Verifying endpoints ==='
+=== Verifying endpoints ===
++ FAILED=0
+++ seq 1 5
++ for i in $(seq 1 $COUNT)
+++ printf %03d 1
++ INSTANCE_NUM=001
++ systemctl is-active --quiet 3proxy@001
++ echo '✗ Endpoint 001 failed to start'
+✗ Endpoint 001 failed to start
++ FAILED=1
++ for i in $(seq 1 $COUNT)
+++ printf %03d 2
++ INSTANCE_NUM=002
++ systemctl is-active --quiet 3proxy@002
++ echo '✗ Endpoint 002 failed to start'
+✗ Endpoint 002 failed to start
++ FAILED=2
++ for i in $(seq 1 $COUNT)
+++ printf %03d 3
++ INSTANCE_NUM=003
++ systemctl is-active --quiet 3proxy@003
++ echo '✗ Endpoint 003 failed to start'
+✗ Endpoint 003 failed to start
++ FAILED=3
++ for i in $(seq 1 $COUNT)
+++ printf %03d 4
++ INSTANCE_NUM=004
++ systemctl is-active --quiet 3proxy@004
++ echo '✗ Endpoint 004 failed to start'
+✗ Endpoint 004 failed to start
++ FAILED=4
++ for i in $(seq 1 $COUNT)
+++ printf %03d 5
++ INSTANCE_NUM=005
++ systemctl is-active --quiet 3proxy@005
++ echo '✗ Endpoint 005 failed to start'
+✗ Endpoint 005 failed to start
++ FAILED=5
++ '[' 5 -eq 0 ']'
++ echo ''
+
++ echo 'WARNING: 5 endpoints failed to start'
+WARNING: 5 endpoints failed to start
++ echo 'Check logs with: journalctl -u 3proxy@NNN'
+Check logs with: journalctl -u 3proxy@NNN
++ exit 1
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' --no-pager
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u '3proxy@001' -n 50 --no-pager
+
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/config/3proxy/3proxy_001.cfg
+cat: /opt/tor-socks-farm/config/3proxy/3proxy_001.cfg: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -60
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+  CONFIG="${CONFIG//__USER__/$user}"
+  CONFIG="${CONFIG//__PASSWORD__/$password}"
+  CONFIG="${CONFIG//__PUBLIC_PORT__/$PUBLIC_PORT}"
+  CONFIG="${CONFIG//__LOCAL_SOCKS__/$LOCAL_SOCKS}"
+  
+  # Write configuration
+  echo "$CONFIG" > /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chown proxy:proxy /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chmod 640 /etc/3proxy/instance$INSTANCE_NUM.cfg
+  
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
+=== Deploying 50 3proxy endpoints ===
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
+
+=== Verifying endpoints ===
+✗ Endpoint 001 failed to start
+✗ Endpoint 002 failed to start
+✗ Endpoint 003 failed to start
+✗ Endpoint 004 failed to start
+✗ Endpoint 005 failed to start
+✗ Endpoint 006 failed to start
+✗ Endpoint 007 failed to start
+✗ Endpoint 008 failed to start
+✗ Endpoint 009 failed to start
+✗ Endpoint 010 failed to start
+✗ Endpoint 011 failed to start
+✗ Endpoint 012 failed to start
+✗ Endpoint 013 failed to start
+✗ Endpoint 014 failed to start
+✗ Endpoint 015 failed to start
+✗ Endpoint 016 failed to start
+✗ Endpoint 017 failed to start
+✗ Endpoint 018 failed to start
+✗ Endpoint 019 failed to start
+✗ Endpoint 020 failed to start
+✗ Endpoint 021 failed to start
+✗ Endpoint 022 failed to start
+✗ Endpoint 023 failed to start
+✗ Endpoint 024 failed to start
+✗ Endpoint 025 failed to start
+✗ Endpoint 026 failed to start
+✗ Endpoint 027 failed to start
+✗ Endpoint 028 failed to start
+✗ Endpoint 029 failed to start
+✗ Endpoint 030 failed to start
+✗ Endpoint 031 failed to start
+✗ Endpoint 032 failed to start
+✗ Endpoint 033 failed to start
+✗ Endpoint 034 failed to start
+✗ Endpoint 035 failed to start
+✗ Endpoint 036 failed to start
+✗ Endpoint 037 failed to start
+✗ Endpoint 038 failed to start
+✗ Endpoint 039 failed to start
+✗ Endpoint 040 failed to start
+✗ Endpoint 041 failed to start
+✗ Endpoint 042 failed to start
+✗ Endpoint 043 failed to start
+✗ Endpoint 044 failed to start
+✗ Endpoint 045 failed to start
+✗ Endpoint 046 failed to start
+✗ Endpoint 047 failed to start
+✗ Endpoint 048 failed to start
+✗ Endpoint 049 failed to start
+✗ Endpoint 050 failed to start
+
+WARNING: 50 endpoints failed to start
+Check logs with: journalctl -u 3proxy@NNN
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' | head -100
+
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u 3proxy@001 -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# ls -la /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -60
+-rwxr-xr-x 1 root root 2573 Nov  5 09:58 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+  CONFIG="${CONFIG//__USER__/$user}"
+  CONFIG="${CONFIG//__PASSWORD__/$password}"
+  CONFIG="${CONFIG//__PUBLIC_PORT__/$PUBLIC_PORT}"
+  CONFIG="${CONFIG//__LOCAL_SOCKS__/$LOCAL_SOCKS}"
+  
+  # Write configuration
+  echo "$CONFIG" > /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chown proxy:proxy /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chmod 640 /etc/3proxy/instance$INSTANCE_NUM.cfg
+  
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 1
+=== Deploying 1 3proxy endpoints ===
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
+
+=== Verifying endpoints ===
+✗ Endpoint 001 failed to start
+
+WARNING: 1 endpoints failed to start
+Check logs with: journalctl -u 3proxy@NNN
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u 3proxy@001 -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/config/3proxy/001.conf
+cat: /opt/tor-socks-farm/config/3proxy/001.conf: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' --no-pager | head -100
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -50
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash -x /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50 2>&1 | head -100
++ set -e
++ '[' 0 -ne 0 ']'
++ source /opt/tor-socks-farm/config/torfarm.env
+++ MIN_INSTANCES=50
+++ MAX_INSTANCES=500
+++ BASE_SOCKS_PORT=9000
+++ BASE_CTRL_PORT=9100
+++ BASE_DNS_PORT=9200
+++ BASE_TRANS_PORT=9300
+++ BASE_PUBLIC_PORT=20000
+++ ROTATE_EVERY_MIN=30
+++ DEFAULT_COUNTRY='*'
++ COUNT=50
++ '[' 50 -gt 500 ']'
++ echo '=== Deploying 50 3proxy endpoints ==='
+=== Deploying 50 3proxy endpoints ===
+++ cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl
++ TEMPLATE='# 3proxy configuration template for instance __INSTANCE__
+# This template will be populated by deploy_3proxy_endpoints.sh
+
+auth strong
+users __USER__:CL:__PASSWORD__
+socks -p__PUBLIC_PORT__ -a
+parent 1000 socks5 127.0.0.1 __LOCAL_SOCKS__'
++ DEPLOYED=0
++ IFS=,
++ read -r instance user password
++ '[' '# WARNING: These are DEFAULT credentials for testing only!' = instance ']'
++ '[' 0 -ge 50 ']'
++ INSTANCE_NUM='# WARNING: These are DEFAULT credentials for testing only!'
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
++ echo ''
+
++ echo '=== Verifying endpoints ==='
+=== Verifying endpoints ===
++ FAILED=0
+++ seq 1 50
++ for i in $(seq 1 $COUNT)
+++ printf %03d 1
++ INSTANCE_NUM=001
++ systemctl is-active --quiet 3proxy@001
++ echo '✗ Endpoint 001 failed to start'
+✗ Endpoint 001 failed to start
++ FAILED=1
++ for i in $(seq 1 $COUNT)
+++ printf %03d 2
++ INSTANCE_NUM=002
++ systemctl is-active --quiet 3proxy@002
++ echo '✗ Endpoint 002 failed to start'
+✗ Endpoint 002 failed to start
++ FAILED=2
++ for i in $(seq 1 $COUNT)
+++ printf %03d 3
++ INSTANCE_NUM=003
++ systemctl is-active --quiet 3proxy@003
++ echo '✗ Endpoint 003 failed to start'
+✗ Endpoint 003 failed to start
++ FAILED=3
++ for i in $(seq 1 $COUNT)
+++ printf %03d 4
++ INSTANCE_NUM=004
++ systemctl is-active --quiet 3proxy@004
++ echo '✗ Endpoint 004 failed to start'
+✗ Endpoint 004 failed to start
++ FAILED=4
++ for i in $(seq 1 $COUNT)
+++ printf %03d 5
++ INSTANCE_NUM=005
++ systemctl is-active --quiet 3proxy@005
++ echo '✗ Endpoint 005 failed to start'
+✗ Endpoint 005 failed to start
++ FAILED=5
++ for i in $(seq 1 $COUNT)
+++ printf %03d 6
++ INSTANCE_NUM=006
++ systemctl is-active --quiet 3proxy@006
++ echo '✗ Endpoint 006 failed to start'
+✗ Endpoint 006 failed to start
++ FAILED=6
++ for i in $(seq 1 $COUNT)
+++ printf %03d 7
++ INSTANCE_NUM=007
++ systemctl is-active --quiet 3proxy@007
++ echo '✗ Endpoint 007 failed to start'
+✗ Endpoint 007 failed to start
++ FAILED=7
++ for i in $(seq 1 $COUNT)
+++ printf %03d 8
++ INSTANCE_NUM=008
++ systemctl is-active --quiet 3proxy@008
++ echo '✗ Endpoint 008 failed to start'
+✗ Endpoint 008 failed to start
++ FAILED=8
++ for i in $(seq 1 $COUNT)
+++ printf %03d 9
++ INSTANCE_NUM=009
++ systemctl is-active --quiet 3proxy@009
++ echo '✗ Endpoint 009 failed to start'
+✗ Endpoint 009 failed to start
++ FAILED=9
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' --no-pager | head -50
+root@vmi2881987:/opt/tor-socks-farm/scripts# ss -tlnp | grep -E ':(9001|20001)'
+LISTEN 0      4096       127.0.0.1:9001      0.0.0.0:*    users:(("tor",pid=13236,fd=6))           
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u 3proxy@001 -n 20 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -60
+
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+  CONFIG="${CONFIG//__USER__/$user}"
+  CONFIG="${CONFIG//__PASSWORD__/$password}"
+  CONFIG="${CONFIG//__PUBLIC_PORT__/$PUBLIC_PORT}"
+  CONFIG="${CONFIG//__LOCAL_SOCKS__/$LOCAL_SOCKS}"
+  
+  # Write configuration
+  echo "$CONFIG" > /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chown proxy:proxy /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chmod 640 /etc/3proxy/instance$INSTANCE_NUM.cfg
+  
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' | head -50
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u '3proxy@001' -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/3proxy/3proxy-001.cfg
+cat: /opt/tor-socks-farm/3proxy/3proxy-001.cfg: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/3proxy/3proxy-001.cfg
+cat: /opt/tor-socks-farm/3proxy/3proxy-001.cfg: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# ss -tlnp | grep -E "(9001|20001)"
+LISTEN 0      4096       127.0.0.1:9001      0.0.0.0:*    users:(("tor",pid=13236,fd=6))           
+root@vmi2881987:/opt/tor-socks-farm/scripts# head -60 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+  CONFIG="${CONFIG//__USER__/$user}"
+  CONFIG="${CONFIG//__PASSWORD__/$password}"
+  CONFIG="${CONFIG//__PUBLIC_PORT__/$PUBLIC_PORT}"
+  CONFIG="${CONFIG//__LOCAL_SOCKS__/$LOCAL_SOCKS}"
+  
+  # Write configuration
+  echo "$CONFIG" > /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chown proxy:proxy /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chmod 640 /etc/3proxy/instance$INSTANCE_NUM.cfg
+  
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' --no-pager | head -30
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u 3proxy@001.service --no-pager -n 50
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status 'tor@001' 'tor@002' 'tor@003' --no-pager
+● tor@001.service - Tor instance 001
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:56:47 CET; 5h 10min ago
+   Main PID: 13236 (tor)
       Tasks: 1 (limit: 28785)
-     Memory: 104.6M
-        CPU: 5.168s
-     CGroup: /system.slice/system-tor.slice/tor@default.service
-             └─10003 /usr/bin/tor --defaults-torrc /usr/share/tor/tor-service-d>
+     Memory: 35.3M
+        CPU: 8.001s
+     CGroup: /system.slice/system-tor.slice/tor@001.service
+             └─13236 /usr/bin/tor -f /etc/tor/torrc.instance001
 
-Nov 05 04:24:48 vmi2881987 Tor[10003]: Bootstrapped 61% (loading_descriptors): >
-Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 68% (loading_descriptors): >
-Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 73% (loading_descriptors): >
-Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 75% (enough_dirinfo): Loade>
-Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 80% (ap_conn): Connecting t>
-Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 85% (ap_conn_done): Connect>
-Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 89% (ap_handshake): Finishi>
-Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 90% (ap_handshake_done): Ha>
-Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 95% (circuit_create): Estab>
-Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 100% (done): Done
+Nov 05 04:56:47 vmi2881987 tor[13236]: Nov 05 04:56:47.229 [notice] Tor can…ous/
+Nov 05 04:56:47 vmi2881987 tor[13236]: Nov 05 04:56:47.229 [notice] Read co…01".
+Nov 05 04:56:47 vmi2881987 tor[13236]: Nov 05 04:56:47.232 [notice] Opening…9001
+Nov 05 04:56:47 vmi2881987 tor[13236]: Nov 05 04:56:47.232 [notice] Opened …9001
+Nov 05 04:56:47 vmi2881987 tor[13236]: Nov 05 04:56:47.232 [notice] Opening…9201
+Nov 05 04:56:47 vmi2881987 tor[13236]: Nov 05 04:56:47.232 [notice] Opened …9201
+Nov 05 04:56:47 vmi2881987 tor[13236]: Nov 05 04:56:47.232 [notice] Opening…9301
+Nov 05 04:56:47 vmi2881987 tor[13236]: Nov 05 04:56:47.232 [notice] Opened …9301
+Nov 05 04:56:47 vmi2881987 tor[13236]: Nov 05 04:56:47.232 [notice] Opening…9101
+Nov 05 04:56:47 vmi2881987 tor[13236]: Nov 05 04:56:47.232 [notice] Opened …9101
 
 ● tor@002.service - Tor instance 002
-     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
-     Active: active (running) since Wed 2025-11-05 04:44:39 CET; 3min 59s ago
-   Main PID: 12443 (tor)
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:56:48 CET; 5h 10min ago
+   Main PID: 13354 (tor)
       Tasks: 1 (limit: 28785)
-     Memory: 95.7M
-        CPU: 1.699s
+     Memory: 35.1M
+        CPU: 8.893s
      CGroup: /system.slice/system-tor.slice/tor@002.service
-             └─12443 /usr/bin/tor -f /etc/tor/torrc.instance002
+             └─13354 /usr/bin/tor -f /etc/tor/torrc.instance002
 
-Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.959 [notice] Tor can't h>
-Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.959 [notice] Read config>
-Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opening Soc>
-Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opened Sock>
-Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opening DNS>
-Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opened DNS >
-Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opening Tra>
-Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opened Tran>
-Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opening Con>
-Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opened Cont>
-
-● tor@006.service - Tor instance 006
-     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
-     Active: active (running) since Wed 2025-11-05 04:44:43 CET; 3min 56s ago
-   Main PID: 12616 (tor)
-      Tasks: 1 (limit: 28785)
-     Memory: 95.6M
-        CPU: 1.894s
-     CGroup: /system.slice/system-tor.slice/tor@006.service
-             └─12616 /usr/bin/tor -f /etc/tor/torrc.instance006
-
-Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.484 [notice] Tor can't h>
-Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.484 [notice] Read config>
-Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opening Soc>
-Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opened Sock>
-Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opening DNS>
-Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opened DNS >
-Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opening Tra>
-Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opened Tran>
-Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opening Con>
-Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opened Cont>
-
-● tor@005.service - Tor instance 005
-     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
-     Active: active (running) since Wed 2025-11-05 04:44:42 CET; 3min 56s ago
-   Main PID: 12573 (tor)
-      Tasks: 1 (limit: 28785)
-     Memory: 95.7M
-        CPU: 1.701s
-     CGroup: /system.slice/system-tor.slice/tor@005.service
-             └─12573 /usr/bin/tor -f /etc/tor/torrc.instance005
-
-Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.581 [notice] Tor can't h>
-Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.581 [notice] Read config>
-Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opening Soc>
-Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opened Sock>
-Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opening DNS>
-Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opened DNS >
-Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opening Tra>
-Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opened Tran>
-Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opening Con>
-Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opened Cont>
-
-● tor@007.service - Tor instance 007
-     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
-     Active: active (running) since Wed 2025-11-05 04:44:44 CET; 3min 55s ago
-   Main PID: 12661 (tor)
-      Tasks: 1 (limit: 28785)
-     Memory: 95.8M
-        CPU: 1.612s
-     CGroup: /system.slice/system-tor.slice/tor@007.service
-             └─12661 /usr/bin/tor -f /etc/tor/torrc.instance007
-
-Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.332 [notice] Tor can't h>
-Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.333 [notice] Read config>
-Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opening Soc>
-Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opened Sock>
-Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opening DNS>
-Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opened DNS >
-Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opening Tra>
-Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opened Tran>
-Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opening Con>
-Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opened Cont>
-
-● tor@004.service - Tor instance 004
-     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
-     Active: active (running) since Wed 2025-11-05 04:44:41 CET; 3min 57s ago
-   Main PID: 12529 (tor)
-      Tasks: 1 (limit: 28785)
-     Memory: 95.6M
-        CPU: 1.637s
-     CGroup: /system.slice/system-tor.slice/tor@004.service
-             └─12529 /usr/bin/tor -f /etc/tor/torrc.instance004
-
-Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.683 [notice] Tor can't h>
-Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.683 [notice] Read config>
-Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opening Soc>
-Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opened Sock>
-Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opening DNS>
-Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opened DNS >
-Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opening Tra>
-Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opened Tran>
-Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opening Con>
-Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opened Cont>
+Nov 05 04:56:48 vmi2881987 tor[13354]: Nov 05 04:56:48.097 [notice] Tor can…ous/
+Nov 05 04:56:48 vmi2881987 tor[13354]: Nov 05 04:56:48.097 [notice] Read co…02".
+Nov 05 04:56:48 vmi2881987 tor[13354]: Nov 05 04:56:48.099 [notice] Opening…9002
+Nov 05 04:56:48 vmi2881987 tor[13354]: Nov 05 04:56:48.099 [notice] Opened …9002
+Nov 05 04:56:48 vmi2881987 tor[13354]: Nov 05 04:56:48.099 [notice] Opening…9202
+Nov 05 04:56:48 vmi2881987 tor[13354]: Nov 05 04:56:48.099 [notice] Opened …9202
+Nov 05 04:56:48 vmi2881987 tor[13354]: Nov 05 04:56:48.099 [notice] Opening…9302
+Nov 05 04:56:48 vmi2881987 tor[13354]: Nov 05 04:56:48.099 [notice] Opened …9302
+Nov 05 04:56:48 vmi2881987 tor[13354]: Nov 05 04:56:48.099 [notice] Opening…9102
+Nov 05 04:56:48 vmi2881987 tor[13354]: Nov 05 04:56:48.099 [notice] Opened …9102
 
 ● tor@003.service - Tor instance 003
-     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
-     Active: active (running) since Wed 2025-11-05 04:44:40 CET; 3min 58s ago
-   Main PID: 12486 (tor)
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-11-05 04:56:48 CET; 5h 10min ago
+   Main PID: 13397 (tor)
       Tasks: 1 (limit: 28785)
-     Memory: 95.7M
-        CPU: 1.771s
+     Memory: 35.2M
+        CPU: 8.249s
      CGroup: /system.slice/system-tor.slice/tor@003.service
-             └─12486 /usr/bin/tor -f /etc/tor/torrc.instance003
+             └─13397 /usr/bin/tor -f /etc/tor/torrc.instance003
 
-Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.829 [notice] Tor can't h>
-Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.829 [notice] Read config>
-Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.831 [notice] Opening Soc>
-Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opened Sock>
-Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opening DNS>
-Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opened DNS >
-Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opening Tra>
-Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opened Tran>
-Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opening Con>
-Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opened Cont>
+Nov 05 04:56:48 vmi2881987 tor[13397]: Nov 05 04:56:48.913 [notice] Tor can…ous/
+Nov 05 04:56:48 vmi2881987 tor[13397]: Nov 05 04:56:48.913 [notice] Read co…03".
+Nov 05 04:56:48 vmi2881987 tor[13397]: Nov 05 04:56:48.915 [notice] Opening…9003
+Nov 05 04:56:48 vmi2881987 tor[13397]: Nov 05 04:56:48.915 [notice] Opened …9003
+Nov 05 04:56:48 vmi2881987 tor[13397]: Nov 05 04:56:48.915 [notice] Opening…9203
+Nov 05 04:56:48 vmi2881987 tor[13397]: Nov 05 04:56:48.915 [notice] Opened …9203
+Nov 05 04:56:48 vmi2881987 tor[13397]: Nov 05 04:56:48.915 [notice] Opening…9303
+Nov 05 04:56:48 vmi2881987 tor[13397]: Nov 05 04:56:48.915 [notice] Opened …9303
+Nov 05 04:56:48 vmi2881987 tor[13397]: Nov 05 04:56:48.915 [notice] Opening…9103
+Nov 05 04:56:48 vmi2881987 tor[13397]: Nov 05 04:56:48.915 [notice] Opened …9103
+Hint: Some lines were ellipsized, use -l to show in full.
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/configs/3proxy/3proxy-001.cfg
+cat: /opt/tor-socks-farm/configs/3proxy/3proxy-001.cfg: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -60
+#!/bin/bash
+set -e
 
-● tor@001.service - Tor instance 001
-     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
-     Active: active (running) since Wed 2025-11-05 04:44:39 CET; 4min 0s ago
-   Main PID: 12399 (tor)
-      Tasks: 1 (limit: 28785)
-     Memory: 95.7M
-        CPU: 1.752s
-     CGroup: /system.slice/system-tor.slice/tor@001.service
-             └─12399 /usr/bin/tor -f /etc/tor/torrc.instance001
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
 
-Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.050 [notice] Tor can't h>
-Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.050 [notice] Read config>
-Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opening Soc>
-Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opened Sock>
-Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opening DNS>
-Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opened DNS >
-Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opening Tra>
-Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opened Tran>
-Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opening Con>
-Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opened Cont>
-lines 145-167/167 (END)
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+  CONFIG="${CONFIG//__USER__/$user}"
+  CONFIG="${CONFIG//__PASSWORD__/$password}"
+  CONFIG="${CONFIG//__PUBLIC_PORT__/$PUBLIC_PORT}"
+  CONFIG="${CONFIG//__LOCAL_SOCKS__/$LOCAL_SOCKS}"
+  
+  # Write configuration
+  echo "$CONFIG" > /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chown proxy:proxy /etc/3proxy/instance$INSTANCE_NUM.cfg
+  chmod 640 /etc/3proxy/instance$INSTANCE_NUM.cfg
+  
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash -x /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 1 2>&1 | head -100
++ set -e
++ '[' 0 -ne 0 ']'
++ source /opt/tor-socks-farm/config/torfarm.env
+++ MIN_INSTANCES=50
+++ MAX_INSTANCES=500
+++ BASE_SOCKS_PORT=9000
+++ BASE_CTRL_PORT=9100
+++ BASE_DNS_PORT=9200
+++ BASE_TRANS_PORT=9300
+++ BASE_PUBLIC_PORT=20000
+++ ROTATE_EVERY_MIN=30
+++ DEFAULT_COUNTRY='*'
++ COUNT=1
++ '[' 1 -gt 500 ']'
++ echo '=== Deploying 1 3proxy endpoints ==='
+=== Deploying 1 3proxy endpoints ===
+++ cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl
++ TEMPLATE='# 3proxy configuration template for instance __INSTANCE__
+# This template will be populated by deploy_3proxy_endpoints.sh
+
+auth strong
+users __USER__:CL:__PASSWORD__
+socks -p__PUBLIC_PORT__ -a
+parent 1000 socks5 127.0.0.1 __LOCAL_SOCKS__'
++ DEPLOYED=0
++ IFS=,
++ read -r instance user password
++ '[' '# WARNING: These are DEFAULT credentials for testing only!' = instance ']'
++ '[' 0 -ge 1 ']'
++ INSTANCE_NUM='# WARNING: These are DEFAULT credentials for testing only!'
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
++ echo ''
+
++ echo '=== Verifying endpoints ==='
+=== Verifying endpoints ===
++ FAILED=0
+++ seq 1 1
++ for i in $(seq 1 $COUNT)
+++ printf %03d 1
++ INSTANCE_NUM=001
++ systemctl is-active --quiet 3proxy@001
++ echo '✗ Endpoint 001 failed to start'
+✗ Endpoint 001 failed to start
++ FAILED=1
++ '[' 1 -eq 0 ']'
++ echo ''
+
++ echo 'WARNING: 1 endpoints failed to start'
+WARNING: 1 endpoints failed to start
++ echo 'Check logs with: journalctl -u 3proxy@NNN'
+Check logs with: journalctl -u 3proxy@NNN
++ exit 1
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' 2>&1 | head -50
+root@vmi2881987:/opt/tor-socks-farm/scripts# journalctl -u '3proxy@001' -n 50 --no-pager
+-- No entries --
+root@vmi2881987:/opt/tor-socks-farm/scripts# cat /opt/tor-socks-farm/config/3proxy@001.cfg 2>&1
+cat: /opt/tor-socks-farm/config/3proxy@001.cfg: No such file or directory
+root@vmi2881987:/opt/tor-socks-farm/scripts# ls -la /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+ls -la /opt/tor-socks-farm/scripts/deploy_tor_instances.sh
+ls -la /opt/tor-socks-farm/scripts/rotate.sh
+-rwxr-xr-x 1 root root 2573 Nov  5 09:58 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh
+-rwxr-xr-x 1 root root 2719 Nov  5 09:58 /opt/tor-socks-farm/scripts/deploy_tor_instances.sh
+-rwxr-xr-x 1 root root 1895 Nov  5 09:58 /opt/tor-socks-farm/scripts/rotate.sh
+root@vmi2881987:/opt/tor-socks-farm/scripts# head -50 /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | tail -16
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+root@vmi2881987:/opt/tor-socks-farm/scripts# sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
+=== Deploying 50 3proxy endpoints ===
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
+
+=== Verifying endpoints ===
+✗ Endpoint 001 failed to start
+✗ Endpoint 002 failed to start
+✗ Endpoint 003 failed to start
+✗ Endpoint 004 failed to start
+✗ Endpoint 005 failed to start
+✗ Endpoint 006 failed to start
+✗ Endpoint 007 failed to start
+✗ Endpoint 008 failed to start
+✗ Endpoint 009 failed to start
+✗ Endpoint 010 failed to start
+✗ Endpoint 011 failed to start
+✗ Endpoint 012 failed to start
+✗ Endpoint 013 failed to start
+✗ Endpoint 014 failed to start
+✗ Endpoint 015 failed to start
+✗ Endpoint 016 failed to start
+✗ Endpoint 017 failed to start
+✗ Endpoint 018 failed to start
+✗ Endpoint 019 failed to start
+✗ Endpoint 020 failed to start
+✗ Endpoint 021 failed to start
+✗ Endpoint 022 failed to start
+✗ Endpoint 023 failed to start
+✗ Endpoint 024 failed to start
+✗ Endpoint 025 failed to start
+✗ Endpoint 026 failed to start
+✗ Endpoint 027 failed to start
+✗ Endpoint 028 failed to start
+✗ Endpoint 029 failed to start
+✗ Endpoint 030 failed to start
+✗ Endpoint 031 failed to start
+✗ Endpoint 032 failed to start
+✗ Endpoint 033 failed to start
+✗ Endpoint 034 failed to start
+✗ Endpoint 035 failed to start
+✗ Endpoint 036 failed to start
+✗ Endpoint 037 failed to start
+✗ Endpoint 038 failed to start
+✗ Endpoint 039 failed to start
+✗ Endpoint 040 failed to start
+✗ Endpoint 041 failed to start
+✗ Endpoint 042 failed to start
+✗ Endpoint 043 failed to start
+✗ Endpoint 044 failed to start
+✗ Endpoint 045 failed to start
+✗ Endpoint 046 failed to start
+✗ Endpoint 047 failed to start
+✗ Endpoint 048 failed to start
+✗ Endpoint 049 failed to start
+✗ Endpoint 050 failed to start
+
+WARNING: 50 endpoints failed to start
+Check logs with: journalctl -u 3proxy@NNN
+root@vmi2881987:/opt/tor-socks-farm/scripts# systemctl status '3proxy@*' | head -30
+root@vmi2881987:/opt/tor-socks-farm/scripts# # 1. Проверка текущей версии скрипта
+cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -50
+
+# 2. Попытка запуска с выводом ошибок
+bash -x /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 1 2>&1 | head -100
+
+# 3. Проверка статуса 3proxy сервисов
+systemctl list-units '3proxy@*' --all
+
+# 4. Проверка логов последней попытки
+journalctl -u '3proxy@001' -n 50 --no-pager
+
+# 5. Проверка конфигурации
+ls -la /opt/tor-socks-farm/config/
+cat /opt/tor-socks-farm/config/3proxy-001.cfg 2>/dev/null | head -20
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
++ set -e
++ '[' 0 -ne 0 ']'
++ source /opt/tor-socks-farm/config/torfarm.env
+++ MIN_INSTANCES=50
+++ MAX_INSTANCES=500
+++ BASE_SOCKS_PORT=9000
+++ BASE_CTRL_PORT=9100
+++ BASE_DNS_PORT=9200
+++ BASE_TRANS_PORT=9300
+++ BASE_PUBLIC_PORT=20000
+++ ROTATE_EVERY_MIN=30
+++ DEFAULT_COUNTRY='*'
++ COUNT=1
++ '[' 1 -gt 500 ']'
++ echo '=== Deploying 1 3proxy endpoints ==='
+=== Deploying 1 3proxy endpoints ===
+++ cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl
++ TEMPLATE='# 3proxy configuration template for instance __INSTANCE__
+# This template will be populated by deploy_3proxy_endpoints.sh
+
+auth strong
+users __USER__:CL:__PASSWORD__
+socks -p__PUBLIC_PORT__ -a
+parent 1000 socks5 127.0.0.1 __LOCAL_SOCKS__'
++ DEPLOYED=0
++ IFS=,
++ read -r instance user password
++ '[' '# WARNING: These are DEFAULT credentials for testing only!' = instance ']'
++ '[' 0 -ge 1 ']'
++ INSTANCE_NUM='# WARNING: These are DEFAULT credentials for testing only!'
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
++ echo ''
+
++ echo '=== Verifying endpoints ==='
+=== Verifying endpoints ===
++ FAILED=0
+++ seq 1 1
++ for i in $(seq 1 $COUNT)
+++ printf %03d 1
++ INSTANCE_NUM=001
++ systemctl is-active --quiet 3proxy@001
++ echo '✗ Endpoint 001 failed to start'
+✗ Endpoint 001 failed to start
++ FAILED=1
++ '[' 1 -eq 0 ']'
++ echo ''
+
++ echo 'WARNING: 1 endpoints failed to start'
+WARNING: 1 endpoints failed to start
++ echo 'Check logs with: journalctl -u 3proxy@NNN'
+Check logs with: journalctl -u 3proxy@NNN
++ exit 1
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+0 loaded units listed.
+To show all installed unit files use 'systemctl list-unit-files'.
+-- No entries --
+total 24
+drwxr-xr-x 2 root root 4096 Nov  5 02:43 .
+drwxr-xr-x 7 root root 4096 Nov  5 02:43 ..
+-rw-r--r-- 1 root root  232 Nov  5 04:30 control.password
+-rw-r--r-- 1 root root  413 Nov  5 04:30 countries.map
+-rw-r--r-- 1 root root  596 Nov  5 04:30 torfarm.env
+-rw-r--r-- 1 root root 1262 Nov  5 04:30 users.csv
+root@vmi2881987:/opt/tor-socks-farm/scripts# # 1. Проверьте текущий скрипт deploy_3proxy_endpoints.sh
+cat /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh | head -50
+
+# 2. Попробуйте развернуть 3proxy эндпоинты
+sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
+
+# 3. Проверьте статус 3proxy сервисов
+systemctl status '3proxy@001' '3proxy@002' '3proxy@003'
+
+# 4. Проверьте логи ошибок
+journalctl -u '3proxy@001' -n 20 --no-pager
+
+# 5. Проверьте конфигурацию первого эндпоинта
+cat /opt/tor-socks-farm/configs/3proxy/001.cfg
+#!/bin/bash
+set -e
+
+# Check root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "ERROR: This script must be run as root"
+  exit 1
+fi
+
+# Source configuration
+source /opt/tor-socks-farm/config/torfarm.env
+
+# Get number of instances from argument or use default
+COUNT=${1:-$MIN_INSTANCES}
+
+# Validate count
+if [ "$COUNT" -gt "$MAX_INSTANCES" ]; then
+  echo "ERROR: Instance count ($COUNT) exceeds MAX_INSTANCES ($MAX_INSTANCES)"
+  exit 1
+fi
+
+echo "=== Deploying $COUNT 3proxy endpoints ==="
+
+# Read template
+TEMPLATE=$(cat /opt/tor-socks-farm/3proxy/instance.cfg.tpl)
+
+# Deploy each endpoint
+DEPLOYED=0
+while IFS=, read -r instance user password; do
+  # Skip header line
+  if [ "$instance" = "instance" ]; then
+    continue
+  fi
+  
+  # Stop if we've deployed enough
+  if [ "$DEPLOYED" -ge "$COUNT" ]; then
+    break
+  fi
+  
+  INSTANCE_NUM=$instance
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
+  
+  echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
+  
+  # Generate config from template
+  CONFIG="$TEMPLATE"
+  CONFIG="${CONFIG//__INSTANCE__/$INSTANCE_NUM}"
+=== Deploying 50 3proxy endpoints ===
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 42: 10##: invalid integer constant (error token is "10##")
+
+=== Verifying endpoints ===
+✗ Endpoint 001 failed to start
+✗ Endpoint 002 failed to start
+✗ Endpoint 003 failed to start
+✗ Endpoint 004 failed to start
+✗ Endpoint 005 failed to start
+✗ Endpoint 006 failed to start
+✗ Endpoint 007 failed to start
+✗ Endpoint 008 failed to start
+✗ Endpoint 009 failed to start
+✗ Endpoint 010 failed to start
+✗ Endpoint 011 failed to start
+✗ Endpoint 012 failed to start
+✗ Endpoint 013 failed to start
+✗ Endpoint 014 failed to start
+✗ Endpoint 015 failed to start
+✗ Endpoint 016 failed to start
+✗ Endpoint 017 failed to start
+✗ Endpoint 018 failed to start
+✗ Endpoint 019 failed to start
+✗ Endpoint 020 failed to start
+✗ Endpoint 021 failed to start
+✗ Endpoint 022 failed to start
+✗ Endpoint 023 failed to start
+✗ Endpoint 024 failed to start
+✗ Endpoint 025 failed to start
+✗ Endpoint 026 failed to start
+✗ Endpoint 027 failed to start
+✗ Endpoint 028 failed to start
+✗ Endpoint 029 failed to start
+✗ Endpoint 030 failed to start
+✗ Endpoint 031 failed to start
+✗ Endpoint 032 failed to start
+✗ Endpoint 033 failed to start
+✗ Endpoint 034 failed to start
+✗ Endpoint 035 failed to start
+✗ Endpoint 036 failed to start
+✗ Endpoint 037 failed to start
+✗ Endpoint 038 failed to start
+✗ Endpoint 039 failed to start
+✗ Endpoint 040 failed to start
+✗ Endpoint 041 failed to start
+✗ Endpoint 042 failed to start
+✗ Endpoint 043 failed to start
+✗ Endpoint 044 failed to start
+✗ Endpoint 045 failed to start
+✗ Endpoint 046 failed to start
+✗ Endpoint 047 failed to start
+✗ Endpoint 048 failed to start
+✗ Endpoint 049 failed to start
+✗ Endpoint 050 failed to start
+
+WARNING: 50 endpoints failed to start
+Check logs with: journalctl -u 3proxy@NNN
+○ 3proxy@001.service - 3proxy endpoint 001
+     Loaded: loaded (/etc/systemd/system/3proxy@.service; disabled; vendor pres>
+     Active: inactive (dead)
+
+○ 3proxy@002.service - 3proxy endpoint 002
+     Loaded: loaded (/etc/systemd/system/3proxy@.service; disabled; vendor pres>
+     Active: inactive (dead)
+
+○ 3proxy@003.service - 3proxy endpoint 003
+     Loaded: loaded (/etc/systemd/system/3proxy@.service; disabled; vendor pres>
+     Active: inactive (dead)
+lines 1-11/11 (END)
