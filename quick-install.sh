@@ -26,7 +26,7 @@ cd /tmp
 rm -f copilot-update-documentation-for-project.zip
 rm -rf Proxy-Good-copilot-update-documentation-for-project
 
-wget -q --show-progress https://github.com/mrolivershea-cyber/Proxy-Good/archive/refs/heads/copilot/update-documentation-for-project.zip
+wget --show-progress -O copilot-update-documentation-for-project.zip https://github.com/mrolivershea-cyber/Proxy-Good/archive/refs/heads/copilot/update-documentation-for-project.zip
 
 echo ""
 echo "📦 Шаг 3/6: Распаковка архива..."
