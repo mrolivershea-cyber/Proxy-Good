@@ -911,4 +911,458 @@ make[1]: Leaving directory '/tmp/3proxy-0.9.4/src'
 
 🎉 Готово! Файлы установлены в /opt/tor-socks-farm/
 
+root@vmi2881987:~# rm -f quick-install.sh
+wget https://raw.githubusercontent.com/mrolivershea-cyber/Proxy-Good/copilot/update-documentation-for-project/quick-install.sh && sudo bash quick-install.sh
+--2025-11-05 04:30:29--  https://raw.githubusercontent.com/mrolivershea-cyber/Proxy-Good/copilot/update-documentation-for-project/quick-install.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 2606:50c0:8000::154, 2606:50c0:8001::154, 2606:50c0:8003::154, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|2606:50c0:8000::154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4736 (4.6K) [text/plain]
+Saving to: ‘quick-install.sh’
+
+quick-install.sh    100%[===================>]   4.62K  --.-KB/s    in 0s      
+
+2025-11-05 04:30:29 (26.8 MB/s) - ‘quick-install.sh’ saved [4736/4736]
+
+╔══════════════════════════════════════════════════════════╗
+║   Tor-SOCKS Farm - Автоматическая установка             ║
+╚══════════════════════════════════════════════════════════╝
+
+🔧 Шаг 1/6: Установка необходимых инструментов...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.81.0-1ubuntu1.21).
+unzip is already the newest version (6.0-26ubuntu3.2).
+wget is already the newest version (1.21.2-2ubuntu1.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+📥 Шаг 2/6: Скачивание файлов проекта...
+--2025-11-05 04:30:35--  https://github.com/mrolivershea-cyber/Proxy-Good/archive/refs/heads/copilot/update-documentation-for-project.zip
+Resolving github.com (github.com)... 140.82.112.3
+Connecting to github.com (github.com)|140.82.112.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/mrolivershea-cyber/Proxy-Good/zip/refs/heads/copilot/update-documentation-for-project [following]
+--2025-11-05 04:30:35--  https://codeload.github.com/mrolivershea-cyber/Proxy-Good/zip/refs/heads/copilot/update-documentation-for-project
+Resolving codeload.github.com (codeload.github.com)... 140.82.112.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.112.10|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/zip]
+Saving to: ‘copilot-update-documentation-for-project.zip’
+
+copilot-update-docu     [ <=>                ]  51.59K  --.-KB/s    in 0.06s   
+
+2025-11-05 04:30:35 (926 KB/s) - ‘copilot-update-documentation-for-project.zip’ saved [52832]
+
+
+📦 Шаг 3/6: Распаковка архива...
+
+📁 Шаг 4/6: Копирование файлов в /opt...
+
+🔧 Шаг 5/6: Установка системных пакетов...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+build-essential is already the newest version (12.9ubuntu3).
+netcat-traditional is already the newest version (1.10-47).
+tor is already the newest version (0.4.6.10-1).
+jq is already the newest version (1.6-2.1ubuntu3.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Установка 3proxy...
+make[1]: Entering directory '/tmp/3proxy-0.9.4/src'
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER 3proxy.c
+3proxy.c: In function ‘dumpcounters’:
+3proxy.c:212:54: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  212 |                                         fprintf(cfp, "%05d %020"PRINTF_INT64_MODIFIER"u%s%s\n", tl->number, tl->traf64, tl->comment?" #" : "", tl->comment? tl->comment : "");
+      |                                                      ^~~~~~~~~~~                                            ~~~~~~~~~~
+      |                                                                                                               |
+      |                                                                                                               uint64_t {aka long unsigned int}
+3proxy.c:212:87: note: format string is defined here
+  212 |               fprintf(cfp, "%05d %020"PRINTF_INT64_MODIFIER"u%s%s\n", tl->number, tl->traf64, tl->comment?" #" : "", tl->comment? tl->comment : "");
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+3proxy.c:221:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  221 |         write(counterd, &cheader, sizeof(struct counter_header));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3proxy.c:230:25: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  230 |                         write(counterd, &crecord, sizeof(struct counter_record));
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3proxy.c: In function ‘cyclestep’:
+3proxy.c:321:41: warning: ignoring return value of ‘system’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  321 |                                         system((char *)tmpbuf+1);
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o mainfunc.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DMODULEMAINFUNC=mainfunc proxymain.c
+gcc -o srvproxy.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER proxy.c
+proxy.c: In function ‘proxychild’:
+proxy.c:396:74: warning: format ‘%llu’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+  396 |                                    sscanf((char *)buf + 15, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                                             ^~~                          ~~~~~~~~~~~~~~~~
+      |                                                                                          |
+      |                                                                                          uint64_t * {aka long unsigned int *}
+
+proxy.c:396:99: note: format string is defined here
+  396 |           sscanf((char *)buf + 15, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+
+proxy.c:506:36: warning: format ‘%llu’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+  506 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u",&contentlength64);
+      |                                    ^~~                         ~~~~~~~~~~~~~~~~
+      |                                                                |
+      |                                                                uint64_t * {aka long unsigned int *}
+proxy.c:506:61: note: format string is defined here
+  506 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u",&contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+proxy.c:564:43: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  564 |   sprintf((char*)buf+strlen((char *)buf), "Content-Length: %"PRINTF_INT64_MODIFIER"u\r\n", contentlength64);
+      |                                           ^~~~~~~~~~~~~~~~~~~                              ~~~~~~~~~~~~~~~
+      |                                                                                            |
+      |                                                                                            uint64_t {aka long unsigned int}
+proxy.c:564:84: note: format string is defined here
+  564 | rlen((char *)buf), "Content-Length: %"PRINTF_INT64_MODIFIER"u\r\n", contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+proxy.c:950:36: warning: format ‘%llu’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+  950 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                    ^~~                          ~~~~~~~~~~~~~~~~
+      |                                                                 |
+      |                                                                 uint64_t * {aka long unsigned int *}
+proxy.c:950:61: note: format string is defined here
+  950 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+proxy.c:1028:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+ 1028 |         sprintf((char*)buf+strlen((char *)buf), "Content-Length: %"PRINTF_INT64_MODIFIER"u\r\n", contentlength64);
+      |                                                 ^~~~~~~~~~~~~~~~~~~                              ~~~~~~~~~~~~~~~
+      |                                                                                                  |
+      |                                                                                                  uint64_t {aka long unsigned int}
+proxy.c:1028:90: note: format string is defined here
+ 1028 | rlen((char *)buf), "Content-Length: %"PRINTF_INT64_MODIFIER"u\r\n", contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+proxy.c:1075:50: warning: format ‘%llx’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+ 1075 |                         sscanf((char *)smallbuf, "%"PRINTF_INT64_MODIFIER"x", &contentlength64);
+      |                                                  ^~~                          ~~~~~~~~~~~~~~~~
+      |                                                                               |
+      |                                                                               uint64_t * {aka long unsigned int *}
+proxy.c:1075:75: note: format string is defined here
+ 1075 |           sscanf((char *)smallbuf, "%"PRINTF_INT64_MODIFIER"x", &contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+
+gcc -o srvpop3p.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pop3p.c
+gcc -o srvsmtpp.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER smtpp.c
+gcc -o srvftppr.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER ftppr.c
+gcc -o srvsocks.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER socks.c
+gcc -o srvtcppm.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER tcppm.c
+gcc -o srvudppm.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER udppm.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER sockmap.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER sockgetchar.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER common.c
+common.c:208:9: warning: initialization of ‘int (*)(struct pollfd *, unsigned int,  int)’ from incompatible pointer type ‘int (*)(struct pollfd *, nfds_t,  int’ {aka ‘int (*)(struct pollfd *, long unsigned int,  int)’} [-Wincompatible-pointer-types]
+  208 |         poll,
+      |         ^~~~
+common.c:208:9: note: (near initialization for ‘so._poll’)
+gcc -o auth.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER auth.c
+gcc -o authradius.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER authradius.c
+gcc -o conf.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER conf.c
+conf.c: In function ‘h_chroot’:
+conf.c:1525:9: warning: ignoring return value of ‘chdir’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1525 |         chdir("/");
+      |         ^~~~~~~~~~
+conf.c: In function ‘h_ace’:
+conf.c:1298:33: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1298 |                                 read(conf.counterd, &crecord, sizeof(struct counter_record));
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o log.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER log.c
+log.c: In function ‘dobuf2’:
+log.c:249:57: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  249 |                                  sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->cycles);
+      |                                                         ^~~                          ~~~~~~~~~~~~~
+      |                                                                                           |
+      |                                                                                           uint64_t {aka long unsigned int}
+log.c:249:82: note: format string is defined here
+  249 |             sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->cycles);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+log.c:253:57: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  253 |                                  sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->statssrv64);
+      |                                                         ^~~                          ~~~~~~~~~~~~~~~~~
+      |                                                                                           |
+      |                                                                                           uint64_t {aka long unsigned int}
+log.c:253:82: note: format string is defined here
+  253 |             sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->statssrv64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+log.c:257:57: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  257 |                                  sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->statscli64);
+      |                                                         ^~~                          ~~~~~~~~~~~~~~~~~
+      |                                                                                           |
+      |                                                                                           uint64_t {aka long unsigned int}
+log.c:257:82: note: format string is defined here
+  257 |             sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->statscli64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+gcc -o datatypes.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER datatypes.c
+datatypes.c: In function ‘pr_unsigned64’:
+datatypes.c:12:53: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+   12 |         if(node->value)(*cbf)(cb, buf, sprintf(buf, "%"PRINTF_INT64_MODIFIER"u", *(uint64_t *)node->value));
+      |                                                     ^~~                          ~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                  |
+      |                                                                                  uint64_t {aka long unsigned int}
+datatypes.c:12:78: note: format string is defined here
+   12 | value)(*cbf)(cb, buf, sprintf(buf, "%"PRINTF_INT64_MODIFIER"u", *(uint64_t *)node->value));
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+gcc -o md4.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER libs/md4.c
+gcc -o md5.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER libs/md5.c
+gcc -o mycrypt.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER mycrypt.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER base64.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER ftp.c
+gcc -o smbdes.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER libs/smbdes.c
+gcc -o ntlm.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER ntlm.c
+gcc -o stringtable.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER stringtable.c
+gcc -o srvwebadmin.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER webadmin.c
+webadmin.c: In function ‘adminchild’:
+webadmin.c:513:41: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  513 |                                         "</td><td>%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                         ^~~~~~~~~~~~
+......
+  517 |                                  cp->traflim64 / (1024 * 1024),
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint64_t {aka long unsigned int}
+webadmin.c:513:75: note: format string is defined here
+  513 |                               "</td><td>%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                                 |
+      |                                                                 long long unsigned int
+
+webadmin.c:513:41: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  513 |                                         "</td><td>%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                         ^~~~~~~~~~~~
+......
+  519 |                                  cp->traf64 / (1024 * 1024),
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             uint64_t {aka long unsigned int}
+webadmin.c:515:70: note: format string is defined here
+  515 |                                "<td>%"PRINTF_INT64_MODIFIER"u.%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+webadmin.c:513:41: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  513 |                                         "</td><td>%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                         ^~~~~~~~~~~~
+......
+  520 |                                  (((cp->traf64/16) *10) / (64*1024))%10,
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     uint64_t {aka long unsigned int}
+webadmin.c:515:96: note: format string is defined here
+  515 |          "<td>%"PRINTF_INT64_MODIFIER"u.%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                                 |
+      |                                                                 long long unsigned int
+
+webadmin.c:596:33: warning: ignoring return value of ‘ftruncate’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  596 |                                 ftruncate(fileno(writable), ftell(writable));
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o srvdnspr.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER dnspr.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER plugins.c
+gcc -o ../bin/3proxy -fPIE -O2 -fno-strict-aliasing -pthread   3proxy.o mainfunc.o auth.o authradius.o conf.o datatypes.o srvproxy.o srvpop3p.o srvsmtpp.o srvftppr.o srvsocks.o srvtcppm.o srvudppm.o sockmap.o sockgetchar.o common.o log.o mycrypt.o md5.o md4.o base64.o ftp.o smbdes.o ntlm.o stringtable.o srvwebadmin.o srvdnspr.o plugins.o  -ldl 
+gcc -o mycryptmain.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN mycrypt.c
+gcc -o ../bin/mycrypt -fPIE -O2 -fno-strict-aliasing -pthread md4.o md5.o base64.o mycryptmain.o
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DNOPORTMAP pop3p.c
+gcc -o ../bin/pop3p -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o pop3p.o sockgetchar.o log.o common.o  -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DNOPORTMAP smtpp.c
+gcc -o ../bin/smtpp -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o smtpp.o sockgetchar.o base64.o log.o common.o  -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DNOPORTMAP ftppr.c
+gcc -o ../bin/ftppr -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o ftppr.o sockgetchar.o common.o log.o ftp.o  -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DPORTMAP tcppm.c
+gcc -o ../bin/tcppm -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o sockgetchar.o tcppm.o log.o common.o -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DPORTMAP udppm.c
+gcc -o ../bin/udppm -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o sockgetchar.o udppm.o log.o common.o -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DNOPORTMAP socks.c
+gcc -o ../bin/socks -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o socks.o sockgetchar.o log.o common.o -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DNOPORTMAP -DANONYMOUS proxy.c
+proxy.c: In function ‘proxychild’:
+proxy.c:506:36: warning: format ‘%llu’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+  506 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u",&contentlength64);
+      |                                    ^~~                         ~~~~~~~~~~~~~~~~
+      |                                                                |
+      |                                                                uint64_t * {aka long unsigned int *}
+proxy.c:506:61: note: format string is defined here
+  506 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u",&contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+proxy.c:950:36: warning: format ‘%llu’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+  950 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                    ^~~                          ~~~~~~~~~~~~~~~~
+      |                                                                 |
+      |                                                                 uint64_t * {aka long unsigned int *}
+proxy.c:950:61: note: format string is defined here
+  950 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+proxy.c:1075:50: warning: format ‘%llx’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+ 1075 |                         sscanf((char *)smallbuf, "%"PRINTF_INT64_MODIFIER"x", &contentlength64);
+      |                                                  ^~~                          ~~~~~~~~~~~~~~~~
+      |                                                                               |
+      |                                                                               uint64_t * {aka long unsigned int *}
+proxy.c:1075:75: note: format string is defined here
+ 1075 |           sscanf((char *)smallbuf, "%"PRINTF_INT64_MODIFIER"x", &contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+
+gcc -o ../bin/proxy -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o proxy.o sockgetchar.o log.o common.o base64.o ftp.o  -ldl 
+make[2]: Entering directory '/tmp/3proxy-0.9.4/src/plugins/StringsPlugin'
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER StringsPlugin.c
+StringsPlugin.c: In function ‘load_string’:
+StringsPlugin.c:35:6: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   35 |      fgets(tmpbuf1, 1023,f);
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+StringsPlugin.c:54:6: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   54 |      fgets(tmpbuf1, 1023,f);
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+gcc -o ../../../bin/StringsPlugin.ld.so -fPIE -O2 -fno-strict-aliasing -pthread -shared StringsPlugin.o
+make[2]: Leaving directory '/tmp/3proxy-0.9.4/src/plugins/StringsPlugin'
+make[2]: Entering directory '/tmp/3proxy-0.9.4/src/plugins/TrafficPlugin'
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER TrafficPlugin.c
+TrafficPlugin.c: In function ‘mylogfunc’:
+TrafficPlugin.c:243:57: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 4 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat]
+  243 |                                         fprintf(stdout, "Port=%hd; Before: srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                   ~~~~~~~~~~~~~~~
+      |                                                                                                                                                                                                                                                                                     |
+      |                                                                                                                                                                                                                                                                                     uint64_t {aka long unsigned int}
+TrafficPlugin.c:243:104: note: format string is defined here
+  243 | intf(stdout, "Port=%hd; Before: srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long int
+
+TrafficPlugin.c:243:57: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 5 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat]
+  243 |                                         fprintf(stdout, "Port=%hd; Before: srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                    ~~~~~~~~~~~~~~~
+      |                                                                                                                                                                                                                                                                                                      |
+      |                                                                                                                                                                                                                                                                                                      uint64_t {aka long unsigned int}
+TrafficPlugin.c:243:135: note: format string is defined here
+  243 |  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long int
+
+TrafficPlugin.c:243:57: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 6 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat]
+  243 |                                         fprintf(stdout, "Port=%hd; Before: srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                     ~~~~~~~~~~~~~~~~~
+      |                                                                                                                                                                                                                                                                                                                            |
+      |                                                                                                                                                                                                                                                                                                                            uint64_t {aka long unsigned int}
+TrafficPlugin.c:243:174: note: format string is defined here
+  243 | RINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long int
+
+TrafficPlugin.c:243:57: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 7 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat]
+  243 |                                         fprintf(stdout, "Port=%hd; Before: srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~
+      |                                                                                                                                                                                                                                                                                                                                               |
+      |                                                                                                                                                                                                                                                                                                                                               uint64_t {aka long unsigned int}
+TrafficPlugin.c:243:205: note: format string is defined here
+  243 |  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long int
+
+gcc -o ../../../bin/TrafficPlugin.ld.so -fPIE -O2 -fno-strict-aliasing -pthread -shared TrafficPlugin.o
+make[2]: Leaving directory '/tmp/3proxy-0.9.4/src/plugins/TrafficPlugin'
+make[2]: Entering directory '/tmp/3proxy-0.9.4/src/plugins/PCREPlugin'
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_compile.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_config.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_dfa_exec.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_exec.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_fullinfo.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_get.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_globals.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_newline.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_ord2utf8.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_refcount.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_study.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_tables.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_valid_utf8.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_version.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_xclass.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_plugin.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_maketables.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_ucd.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_table.c
+gcc -o ../../../bin/PCREPlugin.ld.so -fPIE -O2 -fno-strict-aliasing -pthread -shared pcre_compile.o pcre_config.o pcre_dfa_exec.o pcre_exec.o pcre_fullinfo.o pcre_get.o pcre_globals.o pcre_newline.o pcre_ord2utf8.o pcre_refcount.o pcre_study.o pcre_tables.o pcre_valid_utf8.o pcre_version.o pcre_xclass.o pcre_plugin.o pcre_maketables.o pcre_ucd.o pcre_table.o
+make[2]: Leaving directory '/tmp/3proxy-0.9.4/src/plugins/PCREPlugin'
+make[2]: Entering directory '/tmp/3proxy-0.9.4/src/plugins/TransparentPlugin'
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER transparent_plugin.c
+gcc -o ../../../bin/TransparentPlugin.ld.so -fPIE -O2 -fno-strict-aliasing -pthread -shared transparent_plugin.o
+make[2]: Leaving directory '/tmp/3proxy-0.9.4/src/plugins/TransparentPlugin'
+make[1]: Leaving directory '/tmp/3proxy-0.9.4/src'
+
+👤 Шаг 6/6: Создание системных пользователей...
+
+✅ Базовая установка завершена!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 СЛЕДУЮЩИЕ ШАГИ:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  Полная установка системы:
+   bash /opt/tor-socks-farm/scripts/install.sh
+
+2️⃣  Развёртывание 50 Tor-нод:
+   bash /opt/tor-socks-farm/scripts/deploy_tor_instances.sh 50
+
+3️⃣  Развёртывание прокси-эндпоинтов:
+   bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
+
+4️⃣  Включение автоматической ротации:
+   bash /opt/tor-socks-farm/scripts/enable_rotation.sh
+
+5️⃣  Применение правил безопасности:
+   bash /opt/tor-socks-farm/firewall/hardening.sh
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 ДОКУМЕНТАЦИЯ:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Руководства находятся в:
+   /tmp/Proxy-Good-copilot-update-documentation-for-project/
+
+- README.md - Полное руководство (русский)
+- DEPLOYMENT_GUIDE.md - Пошаговая установка
+- QUICK_REFERENCE.md - Справочник команд
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 Готово! Файлы установлены в /opt/tor-socks-farm/
+
 root@vmi2881987:~# 
