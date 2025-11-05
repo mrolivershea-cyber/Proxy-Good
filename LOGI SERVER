@@ -1,0 +1,914 @@
+Last login: Wed Nov  5 07:57:51 on ttys000
+exchange@Mysteriouss-Air ~ % ssh root@195.26.255.18
+root@195.26.255.18's password: 
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-160-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Nov  5 02:32:30 CET 2025
+
+  System load:           0.12
+  Usage of /:            0.6% of 387.48GB
+  Memory usage:          1%
+  Swap usage:            0%
+  Processes:             153
+  Users logged in:       0
+  IPv4 address for eth0: 195.26.255.18
+  IPv6 address for eth0: 2605:a140:2288:1987::1
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+New release '24.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+  _____
+ / ___/___  _  _ _____ _   ___  ___
+| |   / _ \| \| |_   _/ \ | _ )/ _ \
+| |__| (_) | .` | | |/ _ \| _ \ (_) |
+ \____\___/|_|\_| |_/_/ \_|___/\___/
+
+Welcome!
+
+This server is hosted by Contabo. If you have any questions or need help,
+please don't hesitate to contact us at support@contabo.com.
+
+Last login: Wed Nov  5 01:58:56 2025 from 113.189.109.248
+root@vmi2881987:~# rm -f quick-install.sh
+root@vmi2881987:~# wget https://raw.githubusercontent.com/mrolivershea-cyber/Proxy-Good/copilot/update-documentation-for-project/quick-install.sh && sudo bash quick-install.sh
+--2025-11-05 02:43:01--  https://raw.githubusercontent.com/mrolivershea-cyber/Proxy-Good/copilot/update-documentation-for-project/quick-install.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 2606:50c0:8001::154, 2606:50c0:8002::154, 2606:50c0:8003::154, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|2606:50c0:8001::154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4406 (4.3K) [text/plain]
+Saving to: ‘quick-install.sh’
+
+quick-install.sh    100%[===================>]   4.30K  --.-KB/s    in 0s      
+
+2025-11-05 02:43:01 (17.1 MB/s) - ‘quick-install.sh’ saved [4406/4406]
+
+╔══════════════════════════════════════════════════════════╗
+║   Tor-SOCKS Farm - Автоматическая установка             ║
+╚══════════════════════════════════════════════════════════╝
+
+🔧 Шаг 1/6: Установка необходимых инструментов...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.81.0-1ubuntu1.21).
+unzip is already the newest version (6.0-26ubuntu3.2).
+wget is already the newest version (1.21.2-2ubuntu1.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+📥 Шаг 2/6: Скачивание файлов проекта...
+--2025-11-05 02:43:07--  https://github.com/mrolivershea-cyber/Proxy-Good/archive/refs/heads/copilot/update-documentation-for-project.zip
+Resolving github.com (github.com)... 140.82.114.4
+Connecting to github.com (github.com)|140.82.114.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/mrolivershea-cyber/Proxy-Good/zip/refs/heads/copilot/update-documentation-for-project [following]
+--2025-11-05 02:43:07--  https://codeload.github.com/mrolivershea-cyber/Proxy-Good/zip/refs/heads/copilot/update-documentation-for-project
+Resolving codeload.github.com (codeload.github.com)... 140.82.114.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.114.9|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/zip]
+Saving to: ‘copilot-update-documentation-for-project.zip’
+
+copilot-update-docu     [ <=>                ]  51.29K  --.-KB/s    in 0.05s   
+
+2025-11-05 02:43:07 (943 KB/s) - ‘copilot-update-documentation-for-project.zip’ saved [52518]
+
+
+📦 Шаг 3/6: Распаковка архива...
+
+📁 Шаг 4/6: Копирование файлов в /opt...
+
+🔧 Шаг 5/6: Установка системных пакетов...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package 3proxy
+root@vmi2881987:~# rm -f quick-install.sh
+wget https://raw.githubusercontent.com/mrolivershea-cyber/Proxy-Good/copilot/update-documentation-for-project/quick-install.sh && sudo bash quick-install.sh
+--2025-11-05 04:22:11--  https://raw.githubusercontent.com/mrolivershea-cyber/Proxy-Good/copilot/update-documentation-for-project/quick-install.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 2606:50c0:8002::154, 2606:50c0:8001::154, 2606:50c0:8000::154, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|2606:50c0:8002::154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4736 (4.6K) [text/plain]
+Saving to: ‘quick-install.sh’
+
+quick-install.sh    100%[===================>]   4.62K  --.-KB/s    in 0s      
+
+2025-11-05 04:22:11 (19.9 MB/s) - ‘quick-install.sh’ saved [4736/4736]
+
+╔══════════════════════════════════════════════════════════╗
+║   Tor-SOCKS Farm - Автоматическая установка             ║
+╚══════════════════════════════════════════════════════════╝
+
+🔧 Шаг 1/6: Установка необходимых инструментов...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.81.0-1ubuntu1.21).
+unzip is already the newest version (6.0-26ubuntu3.2).
+wget is already the newest version (1.21.2-2ubuntu1.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+📥 Шаг 2/6: Скачивание файлов проекта...
+--2025-11-05 04:22:26--  https://github.com/mrolivershea-cyber/Proxy-Good/archive/refs/heads/copilot/update-documentation-for-project.zip
+Resolving github.com (github.com)... 140.82.114.3
+Connecting to github.com (github.com)|140.82.114.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/mrolivershea-cyber/Proxy-Good/zip/refs/heads/copilot/update-documentation-for-project [following]
+--2025-11-05 04:22:26--  https://codeload.github.com/mrolivershea-cyber/Proxy-Good/zip/refs/heads/copilot/update-documentation-for-project
+Resolving codeload.github.com (codeload.github.com)... 140.82.112.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.112.9|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/zip]
+Saving to: ‘copilot-update-documentation-for-project.zip’
+
+copilot-update-docu     [ <=>                ]  51.59K  --.-KB/s    in 0.06s   
+
+2025-11-05 04:22:26 (925 KB/s) - ‘copilot-update-documentation-for-project.zip’ saved [52832]
+
+
+📦 Шаг 3/6: Распаковка архива...
+
+📁 Шаг 4/6: Копирование файлов в /opt...
+
+🔧 Шаг 5/6: Установка системных пакетов...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  bzip2 cpp cpp-11 dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++
+  g++-11 gcc gcc-11 gcc-11-base libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libatomic1
+  libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libdeflate0
+  libdpkg-perl libevent-2.1-7 libfakeroot libfile-fcntllock-perl
+  libfontconfig1 libgcc-11-dev libgd3 libgomp1 libisl23 libitm1 libjbig0
+  libjpeg-turbo8 libjpeg8 libjq1 liblsan0 libmpc3 libnsl-dev libonig5
+  libquadmath0 libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1
+  libwebp7 libxpm4 linux-libc-dev lto-disabled-list make manpages-dev
+  rpcsvc-proto tor-geoipdb torsocks
+Suggested packages:
+  bzip2-doc cpp-doc gcc-11-locales debian-keyring g++-multilib g++-11-multilib
+  gcc-11-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc
+  gcc-11-multilib glibc-doc bzr libgd-tools libstdc++-11-doc make-doc
+  mixmaster torbrowser-launcher socat apparmor-utils nyx obfs4proxy
+The following NEW packages will be installed:
+  build-essential bzip2 cpp cpp-11 dpkg-dev fakeroot fontconfig-config
+  fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base jq
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libasan6 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0
+  libcrypt-dev libdeflate0 libdpkg-perl libevent-2.1-7 libfakeroot
+  libfile-fcntllock-perl libfontconfig1 libgcc-11-dev libgd3 libgomp1 libisl23
+  libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjq1 liblsan0 libmpc3 libnsl-dev
+  libonig5 libquadmath0 libstdc++-11-dev libtiff5 libtirpc-dev libtsan0
+  libubsan1 libwebp7 libxpm4 linux-libc-dev lto-disabled-list make
+  manpages-dev netcat-traditional rpcsvc-proto tor tor-geoipdb torsocks
+0 upgraded, 60 newly installed, 0 to remove and 0 not upgraded.
+Need to get 67.2 MB of archives.
+After this operation, 225 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-dev-bin amd64 2.35-0ubuntu3.11 [20.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-161.171 [1307 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcrypt-dev amd64 1:4.4.27-1 [112 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu6 [68.5 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtirpc-dev amd64 1.3.2-2ubuntu0.1 [192 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnsl-dev amd64 1.3.0-2build2 [71.3 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev amd64 2.35-0ubuntu3.11 [2100 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-base amd64 11.4.0-1ubuntu1~22.04.2 [20.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 libisl23 amd64 0.24-2build1 [727 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpc3 amd64 1.2.1-2build1 [46.9 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11 amd64 11.4.0-1ubuntu1~22.04.2 [10.0 MB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 cpp amd64 4:11.2.0-1ubuntu1 [27.7 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcc1-0 amd64 12.3.0-1ubuntu1~22.04.2 [48.3 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1 amd64 12.3.0-1ubuntu1~22.04.2 [127 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1 amd64 12.3.0-1ubuntu1~22.04.2 [30.2 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1 amd64 12.3.0-1ubuntu1~22.04.2 [10.4 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6 amd64 11.4.0-1ubuntu1~22.04.2 [2283 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0 amd64 12.3.0-1ubuntu1~22.04.2 [1069 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0 amd64 11.4.0-1ubuntu1~22.04.2 [2262 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1 amd64 12.3.0-1ubuntu1~22.04.2 [976 kB]
+Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libquadmath0 amd64 12.3.0-1ubuntu1~22.04.2 [154 kB]
+Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev amd64 11.4.0-1ubuntu1~22.04.2 [2517 kB]
+Get:23 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11 amd64 11.4.0-1ubuntu1~22.04.2 [20.1 MB]
+Get:24 http://archive.ubuntu.com/ubuntu jammy/main amd64 gcc amd64 4:11.2.0-1ubuntu1 [5112 B]
+Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++-11-dev amd64 11.4.0-1ubuntu1~22.04.2 [2101 kB]
+Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 g++-11 amd64 11.4.0-1ubuntu1~22.04.2 [11.4 MB]
+Get:27 http://archive.ubuntu.com/ubuntu jammy/main amd64 g++ amd64 4:11.2.0-1ubuntu1 [1412 B]
+Get:28 http://archive.ubuntu.com/ubuntu jammy/main amd64 make amd64 4.3-4.1build1 [180 kB]
+Get:29 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libdpkg-perl all 1.21.1ubuntu2.6 [237 kB]
+Get:30 http://archive.ubuntu.com/ubuntu jammy/main amd64 bzip2 amd64 1.0.8-5build1 [34.8 kB]
+Get:31 http://archive.ubuntu.com/ubuntu jammy/main amd64 lto-disabled-list all 24 [12.5 kB]
+Get:32 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 dpkg-dev all 1.21.1ubuntu2.6 [922 kB]
+Get:33 http://archive.ubuntu.com/ubuntu jammy/main amd64 build-essential amd64 12.9ubuntu3 [4744 B]
+Get:34 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfakeroot amd64 1.28-1ubuntu1 [31.5 kB]
+Get:35 http://archive.ubuntu.com/ubuntu jammy/main amd64 fakeroot amd64 1.28-1ubuntu1 [60.4 kB]
+Get:36 http://archive.ubuntu.com/ubuntu jammy/main amd64 fonts-dejavu-core all 2.37-2build1 [1041 kB]
+Get:37 http://archive.ubuntu.com/ubuntu jammy/main amd64 fontconfig-config all 2.13.1-4.2ubuntu5 [29.1 kB]
+Get:38 http://archive.ubuntu.com/ubuntu jammy/main amd64 libonig5 amd64 6.9.7.1-2build1 [172 kB]
+Get:39 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libjq1 amd64 1.6-2.1ubuntu3.1 [133 kB]
+Get:40 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 jq amd64 1.6-2.1ubuntu3.1 [52.5 kB]
+Get:41 http://archive.ubuntu.com/ubuntu jammy/main amd64 libalgorithm-diff-perl all 1.201-1 [41.8 kB]
+Get:42 http://archive.ubuntu.com/ubuntu jammy/main amd64 libalgorithm-diff-xs-perl amd64 0.04-6build3 [11.9 kB]
+Get:43 http://archive.ubuntu.com/ubuntu jammy/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
+Get:44 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfontconfig1 amd64 2.13.1-4.2ubuntu5 [131 kB]
+Get:45 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg-turbo8 amd64 2.1.2-0ubuntu1 [134 kB]
+Get:46 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg8 amd64 8c-2ubuntu10 [2264 B]
+Get:47 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdeflate0 amd64 1.10-2 [70.9 kB]
+Get:48 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libjbig0 amd64 2.1-3.1ubuntu0.22.04.1 [29.2 kB]
+Get:49 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libwebp7 amd64 1.2.2-2ubuntu0.22.04.2 [206 kB]
+Get:50 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtiff5 amd64 4.3.0-6ubuntu0.12 [185 kB]
+Get:51 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxpm4 amd64 1:3.5.12-1ubuntu0.22.04.2 [36.7 kB]
+Get:52 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgd3 amd64 2.3.0-2ubuntu2.3 [129 kB]
+Get:53 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-devtools amd64 2.35-0ubuntu3.11 [29.0 kB]
+Get:54 http://archive.ubuntu.com/ubuntu jammy/main amd64 libevent-2.1-7 amd64 2.1.12-stable-1build3 [148 kB]
+Get:55 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfile-fcntllock-perl amd64 0.22-3build7 [33.9 kB]
+Get:56 http://archive.ubuntu.com/ubuntu jammy/main amd64 manpages-dev all 5.10-1ubuntu1 [2309 kB]
+Get:57 http://archive.ubuntu.com/ubuntu jammy/universe amd64 netcat-traditional amd64 1.10-47 [63.3 kB]
+Get:58 http://archive.ubuntu.com/ubuntu jammy/universe amd64 tor amd64 0.4.6.10-1 [1665 kB]
+Get:59 http://archive.ubuntu.com/ubuntu jammy/universe amd64 torsocks amd64 2.3.0-3 [62.5 kB]
+Get:60 http://archive.ubuntu.com/ubuntu jammy/universe amd64 tor-geoipdb all 0.4.6.10-1 [1103 kB]
+Fetched 67.2 MB in 2s (44.5 MB/s)      
+Extracting templates from packages: 100%
+Selecting previously unselected package libc-dev-bin.
+(Reading database ... 94205 files and directories currently installed.)
+Preparing to unpack .../00-libc-dev-bin_2.35-0ubuntu3.11_amd64.deb ...
+Unpacking libc-dev-bin (2.35-0ubuntu3.11) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../01-linux-libc-dev_5.15.0-161.171_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.15.0-161.171) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../02-libcrypt-dev_1%3a4.4.27-1_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.27-1) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../03-rpcsvc-proto_1.4.2-0ubuntu6_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.2-0ubuntu6) ...
+Selecting previously unselected package libtirpc-dev:amd64.
+Preparing to unpack .../04-libtirpc-dev_1.3.2-2ubuntu0.1_amd64.deb ...
+Unpacking libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
+Selecting previously unselected package libnsl-dev:amd64.
+Preparing to unpack .../05-libnsl-dev_1.3.0-2build2_amd64.deb ...
+Unpacking libnsl-dev:amd64 (1.3.0-2build2) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../06-libc6-dev_2.35-0ubuntu3.11_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.35-0ubuntu3.11) ...
+Selecting previously unselected package gcc-11-base:amd64.
+Preparing to unpack .../07-gcc-11-base_11.4.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking gcc-11-base:amd64 (11.4.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../08-libisl23_0.24-2build1_amd64.deb ...
+Unpacking libisl23:amd64 (0.24-2build1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../09-libmpc3_1.2.1-2build1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.2.1-2build1) ...
+Selecting previously unselected package cpp-11.
+Preparing to unpack .../10-cpp-11_11.4.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking cpp-11 (11.4.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../11-cpp_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking cpp (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../12-libcc1-0_12.3.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking libcc1-0:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../13-libgomp1_12.3.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking libgomp1:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../14-libitm1_12.3.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking libitm1:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../15-libatomic1_12.3.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking libatomic1:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package libasan6:amd64.
+Preparing to unpack .../16-libasan6_11.4.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking libasan6:amd64 (11.4.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../17-liblsan0_12.3.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking liblsan0:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../18-libtsan0_11.4.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking libtsan0:amd64 (11.4.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../19-libubsan1_12.3.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking libubsan1:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../20-libquadmath0_12.3.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking libquadmath0:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package libgcc-11-dev:amd64.
+Preparing to unpack .../21-libgcc-11-dev_11.4.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking libgcc-11-dev:amd64 (11.4.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package gcc-11.
+Preparing to unpack .../22-gcc-11_11.4.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking gcc-11 (11.4.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../23-gcc_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking gcc (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package libstdc++-11-dev:amd64.
+Preparing to unpack .../24-libstdc++-11-dev_11.4.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking libstdc++-11-dev:amd64 (11.4.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package g++-11.
+Preparing to unpack .../25-g++-11_11.4.0-1ubuntu1~22.04.2_amd64.deb ...
+Unpacking g++-11 (11.4.0-1ubuntu1~22.04.2) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../26-g++_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking g++ (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../27-make_4.3-4.1build1_amd64.deb ...
+Unpacking make (4.3-4.1build1) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../28-libdpkg-perl_1.21.1ubuntu2.6_all.deb ...
+Unpacking libdpkg-perl (1.21.1ubuntu2.6) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../29-bzip2_1.0.8-5build1_amd64.deb ...
+Unpacking bzip2 (1.0.8-5build1) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../30-lto-disabled-list_24_all.deb ...
+Unpacking lto-disabled-list (24) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../31-dpkg-dev_1.21.1ubuntu2.6_all.deb ...
+Unpacking dpkg-dev (1.21.1ubuntu2.6) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../32-build-essential_12.9ubuntu3_amd64.deb ...
+Unpacking build-essential (12.9ubuntu3) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../33-libfakeroot_1.28-1ubuntu1_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.28-1ubuntu1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../34-fakeroot_1.28-1ubuntu1_amd64.deb ...
+Unpacking fakeroot (1.28-1ubuntu1) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../35-fonts-dejavu-core_2.37-2build1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-2build1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../36-fontconfig-config_2.13.1-4.2ubuntu5_all.deb ...
+Unpacking fontconfig-config (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libonig5:amd64.
+Preparing to unpack .../37-libonig5_6.9.7.1-2build1_amd64.deb ...
+Unpacking libonig5:amd64 (6.9.7.1-2build1) ...
+Selecting previously unselected package libjq1:amd64.
+Preparing to unpack .../38-libjq1_1.6-2.1ubuntu3.1_amd64.deb ...
+Unpacking libjq1:amd64 (1.6-2.1ubuntu3.1) ...
+Selecting previously unselected package jq.
+Preparing to unpack .../39-jq_1.6-2.1ubuntu3.1_amd64.deb ...
+Unpacking jq (1.6-2.1ubuntu3.1) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../40-libalgorithm-diff-perl_1.201-1_all.deb ...
+Unpacking libalgorithm-diff-perl (1.201-1) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../41-libalgorithm-diff-xs-perl_0.04-6build3_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-6build3) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../42-libalgorithm-merge-perl_0.08-3_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-3) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../43-libfontconfig1_2.13.1-4.2ubuntu5_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../44-libjpeg-turbo8_2.1.2-0ubuntu1_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../45-libjpeg8_8c-2ubuntu10_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu10) ...
+Selecting previously unselected package libdeflate0:amd64.
+Preparing to unpack .../46-libdeflate0_1.10-2_amd64.deb ...
+Unpacking libdeflate0:amd64 (1.10-2) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../47-libjbig0_2.1-3.1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Selecting previously unselected package libwebp7:amd64.
+Preparing to unpack .../48-libwebp7_1.2.2-2ubuntu0.22.04.2_amd64.deb ...
+Unpacking libwebp7:amd64 (1.2.2-2ubuntu0.22.04.2) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../49-libtiff5_4.3.0-6ubuntu0.12_amd64.deb ...
+Unpacking libtiff5:amd64 (4.3.0-6ubuntu0.12) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../50-libxpm4_1%3a3.5.12-1ubuntu0.22.04.2_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.2) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../51-libgd3_2.3.0-2ubuntu2.3_amd64.deb ...
+Unpacking libgd3:amd64 (2.3.0-2ubuntu2.3) ...
+Selecting previously unselected package libc-devtools.
+Preparing to unpack .../52-libc-devtools_2.35-0ubuntu3.11_amd64.deb ...
+Unpacking libc-devtools (2.35-0ubuntu3.11) ...
+Selecting previously unselected package libevent-2.1-7:amd64.
+Preparing to unpack .../53-libevent-2.1-7_2.1.12-stable-1build3_amd64.deb ...
+Unpacking libevent-2.1-7:amd64 (2.1.12-stable-1build3) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../54-libfile-fcntllock-perl_0.22-3build7_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-3build7) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../55-manpages-dev_5.10-1ubuntu1_all.deb ...
+Unpacking manpages-dev (5.10-1ubuntu1) ...
+Selecting previously unselected package netcat-traditional.
+Preparing to unpack .../56-netcat-traditional_1.10-47_amd64.deb ...
+Unpacking netcat-traditional (1.10-47) ...
+Selecting previously unselected package tor.
+Preparing to unpack .../57-tor_0.4.6.10-1_amd64.deb ...
+Unpacking tor (0.4.6.10-1) ...
+Selecting previously unselected package torsocks.
+Preparing to unpack .../58-torsocks_2.3.0-3_amd64.deb ...
+Unpacking torsocks (2.3.0-3) ...
+Selecting previously unselected package tor-geoipdb.
+Preparing to unpack .../59-tor-geoipdb_0.4.6.10-1_all.deb ...
+Unpacking tor-geoipdb (0.4.6.10-1) ...
+Setting up gcc-11-base:amd64 (11.4.0-1ubuntu1~22.04.2) ...
+Setting up manpages-dev (5.10-1ubuntu1) ...
+Setting up lto-disabled-list (24) ...
+Setting up libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.2) ...
+Setting up netcat-traditional (1.10-47) ...
+Setting up libfile-fcntllock-perl (0.22-3build7) ...
+Setting up libalgorithm-diff-perl (1.201-1) ...
+Setting up libdeflate0:amd64 (1.10-2) ...
+Setting up linux-libc-dev:amd64 (5.15.0-161.171) ...
+Setting up libgomp1:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Setting up bzip2 (1.0.8-5build1) ...
+Setting up libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Setting up libfakeroot:amd64 (1.28-1ubuntu1) ...
+Setting up libasan6:amd64 (11.4.0-1ubuntu1~22.04.2) ...
+Setting up fakeroot (1.28-1ubuntu1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+Setting up libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
+Setting up rpcsvc-proto (1.4.2-0ubuntu6) ...
+Setting up make (4.3-4.1build1) ...
+Setting up libquadmath0:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Setting up libmpc3:amd64 (1.2.1-2build1) ...
+Setting up libatomic1:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Setting up libevent-2.1-7:amd64 (2.1.12-stable-1build3) ...
+Setting up fonts-dejavu-core (2.37-2build1) ...
+Setting up libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Setting up libdpkg-perl (1.21.1ubuntu2.6) ...
+Setting up libwebp7:amd64 (1.2.2-2ubuntu0.22.04.2) ...
+Setting up libubsan1:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Setting up libnsl-dev:amd64 (1.3.0-2build2) ...
+Setting up libcrypt-dev:amd64 (1:4.4.27-1) ...
+Setting up tor (0.4.6.10-1) ...
+Something or somebody made /var/lib/tor disappear.
+Creating one for you again.
+Something or somebody made /var/log/tor disappear.
+Creating one for you again.
+Created symlink /etc/systemd/system/multi-user.target.wants/tor.service → /lib/systemd/system/tor.service.
+Setting up libisl23:amd64 (0.24-2build1) ...
+Setting up libc-dev-bin (2.35-0ubuntu3.11) ...
+Setting up torsocks (2.3.0-3) ...
+Setting up libalgorithm-diff-xs-perl (0.04-6build3) ...
+Setting up libcc1-0:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Setting up libonig5:amd64 (6.9.7.1-2build1) ...
+Setting up liblsan0:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Setting up libitm1:amd64 (12.3.0-1ubuntu1~22.04.2) ...
+Setting up libalgorithm-merge-perl (0.08-3) ...
+Setting up libtsan0:amd64 (11.4.0-1ubuntu1~22.04.2) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu10) ...
+Setting up cpp-11 (11.4.0-1ubuntu1~22.04.2) ...
+Setting up libjq1:amd64 (1.6-2.1ubuntu3.1) ...
+Setting up fontconfig-config (2.13.1-4.2ubuntu5) ...
+Setting up dpkg-dev (1.21.1ubuntu2.6) ...
+Setting up tor-geoipdb (0.4.6.10-1) ...
+Setting up libgcc-11-dev:amd64 (11.4.0-1ubuntu1~22.04.2) ...
+Setting up gcc-11 (11.4.0-1ubuntu1~22.04.2) ...
+Setting up cpp (4:11.2.0-1ubuntu1) ...
+Setting up jq (1.6-2.1ubuntu3.1) ...
+Setting up libc6-dev:amd64 (2.35-0ubuntu3.11) ...
+Setting up libtiff5:amd64 (4.3.0-6ubuntu0.12) ...
+Setting up libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Setting up gcc (4:11.2.0-1ubuntu1) ...
+Setting up libgd3:amd64 (2.3.0-2ubuntu2.3) ...
+Setting up libstdc++-11-dev:amd64 (11.4.0-1ubuntu1~22.04.2) ...
+Setting up libc-devtools (2.35-0ubuntu3.11) ...
+Setting up g++-11 (11.4.0-1ubuntu1~22.04.2) ...
+Setting up g++ (4:11.2.0-1ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up build-essential (12.9ubuntu3) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.11) ...
+Scanning processes...                                                           
+Scanning candidates...                                                          
+Scanning linux images...                                                        
+
+Pending kernel upgrade!
+
+Running kernel version:
+  5.15.0-160-generic
+
+Diagnostics:
+  The currently running kernel version is not the expected kernel version
+5.15.0-161-generic.
+
+Restarting the system to load the new kernel will not be handled automatically,
+so you should consider rebooting. [Return]
+
+Services to be restarted:
+ systemctl restart packagekit.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Установка 3proxy...
+make[1]: Entering directory '/tmp/3proxy-0.9.4/src'
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER 3proxy.c
+3proxy.c: In function ‘dumpcounters’:
+3proxy.c:212:54: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  212 |                                         fprintf(cfp, "%05d %020"PRINTF_INT64_MODIFIER"u%s%s\n", tl->number, tl->traf64, tl->comment?" #" : "", tl->comment? tl->comment : "");
+      |                                                      ^~~~~~~~~~~                                            ~~~~~~~~~~
+      |                                                                                                               |
+      |                                                                                                               uint64_t {aka long unsigned int}
+3proxy.c:212:87: note: format string is defined here
+  212 |               fprintf(cfp, "%05d %020"PRINTF_INT64_MODIFIER"u%s%s\n", tl->number, tl->traf64, tl->comment?" #" : "", tl->comment? tl->comment : "");
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+3proxy.c:221:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  221 |         write(counterd, &cheader, sizeof(struct counter_header));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3proxy.c:230:25: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  230 |                         write(counterd, &crecord, sizeof(struct counter_record));
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3proxy.c: In function ‘cyclestep’:
+3proxy.c:321:41: warning: ignoring return value of ‘system’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  321 |                                         system((char *)tmpbuf+1);
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o mainfunc.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DMODULEMAINFUNC=mainfunc proxymain.c
+gcc -o srvproxy.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER proxy.c
+proxy.c: In function ‘proxychild’:
+proxy.c:396:74: warning: format ‘%llu’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+  396 |                                    sscanf((char *)buf + 15, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                                             ^~~                          ~~~~~~~~~~~~~~~~
+      |                                                                                          |
+      |                                                                                          uint64_t * {aka long unsigned int *}
+
+proxy.c:396:99: note: format string is defined here
+  396 |           sscanf((char *)buf + 15, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+
+proxy.c:506:36: warning: format ‘%llu’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+  506 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u",&contentlength64);
+      |                                    ^~~                         ~~~~~~~~~~~~~~~~
+      |                                                                |
+      |                                                                uint64_t * {aka long unsigned int *}
+proxy.c:506:61: note: format string is defined here
+  506 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u",&contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+proxy.c:564:43: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  564 |   sprintf((char*)buf+strlen((char *)buf), "Content-Length: %"PRINTF_INT64_MODIFIER"u\r\n", contentlength64);
+      |                                           ^~~~~~~~~~~~~~~~~~~                              ~~~~~~~~~~~~~~~
+      |                                                                                            |
+      |                                                                                            uint64_t {aka long unsigned int}
+proxy.c:564:84: note: format string is defined here
+  564 | rlen((char *)buf), "Content-Length: %"PRINTF_INT64_MODIFIER"u\r\n", contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+proxy.c:950:36: warning: format ‘%llu’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+  950 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                    ^~~                          ~~~~~~~~~~~~~~~~
+      |                                                                 |
+      |                                                                 uint64_t * {aka long unsigned int *}
+proxy.c:950:61: note: format string is defined here
+  950 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+proxy.c:1028:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+ 1028 |         sprintf((char*)buf+strlen((char *)buf), "Content-Length: %"PRINTF_INT64_MODIFIER"u\r\n", contentlength64);
+      |                                                 ^~~~~~~~~~~~~~~~~~~                              ~~~~~~~~~~~~~~~
+      |                                                                                                  |
+      |                                                                                                  uint64_t {aka long unsigned int}
+proxy.c:1028:90: note: format string is defined here
+ 1028 | rlen((char *)buf), "Content-Length: %"PRINTF_INT64_MODIFIER"u\r\n", contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+proxy.c:1075:50: warning: format ‘%llx’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+ 1075 |                         sscanf((char *)smallbuf, "%"PRINTF_INT64_MODIFIER"x", &contentlength64);
+      |                                                  ^~~                          ~~~~~~~~~~~~~~~~
+      |                                                                               |
+      |                                                                               uint64_t * {aka long unsigned int *}
+proxy.c:1075:75: note: format string is defined here
+ 1075 |           sscanf((char *)smallbuf, "%"PRINTF_INT64_MODIFIER"x", &contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+
+gcc -o srvpop3p.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pop3p.c
+gcc -o srvsmtpp.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER smtpp.c
+gcc -o srvftppr.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER ftppr.c
+gcc -o srvsocks.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER socks.c
+gcc -o srvtcppm.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER tcppm.c
+gcc -o srvudppm.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER udppm.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER sockmap.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER sockgetchar.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER common.c
+common.c:208:9: warning: initialization of ‘int (*)(struct pollfd *, unsigned int,  int)’ from incompatible pointer type ‘int (*)(struct pollfd *, nfds_t,  int’ {aka ‘int (*)(struct pollfd *, long unsigned int,  int)’} [-Wincompatible-pointer-types]
+  208 |         poll,
+      |         ^~~~
+common.c:208:9: note: (near initialization for ‘so._poll’)
+gcc -o auth.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER auth.c
+gcc -o authradius.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER authradius.c
+gcc -o conf.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER conf.c
+conf.c: In function ‘h_chroot’:
+conf.c:1525:9: warning: ignoring return value of ‘chdir’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1525 |         chdir("/");
+      |         ^~~~~~~~~~
+conf.c: In function ‘h_ace’:
+conf.c:1298:33: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1298 |                                 read(conf.counterd, &crecord, sizeof(struct counter_record));
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o log.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER log.c
+log.c: In function ‘dobuf2’:
+log.c:249:57: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  249 |                                  sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->cycles);
+      |                                                         ^~~                          ~~~~~~~~~~~~~
+      |                                                                                           |
+      |                                                                                           uint64_t {aka long unsigned int}
+log.c:249:82: note: format string is defined here
+  249 |             sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->cycles);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+log.c:253:57: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  253 |                                  sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->statssrv64);
+      |                                                         ^~~                          ~~~~~~~~~~~~~~~~~
+      |                                                                                           |
+      |                                                                                           uint64_t {aka long unsigned int}
+log.c:253:82: note: format string is defined here
+  253 |             sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->statssrv64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+log.c:257:57: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  257 |                                  sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->statscli64);
+      |                                                         ^~~                          ~~~~~~~~~~~~~~~~~
+      |                                                                                           |
+      |                                                                                           uint64_t {aka long unsigned int}
+log.c:257:82: note: format string is defined here
+  257 |             sprintf((char *)buf+i, "%"PRINTF_INT64_MODIFIER"u", param->statscli64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+gcc -o datatypes.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER datatypes.c
+datatypes.c: In function ‘pr_unsigned64’:
+datatypes.c:12:53: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+   12 |         if(node->value)(*cbf)(cb, buf, sprintf(buf, "%"PRINTF_INT64_MODIFIER"u", *(uint64_t *)node->value));
+      |                                                     ^~~                          ~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                  |
+      |                                                                                  uint64_t {aka long unsigned int}
+datatypes.c:12:78: note: format string is defined here
+   12 | value)(*cbf)(cb, buf, sprintf(buf, "%"PRINTF_INT64_MODIFIER"u", *(uint64_t *)node->value));
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+gcc -o md4.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER libs/md4.c
+gcc -o md5.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER libs/md5.c
+gcc -o mycrypt.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER mycrypt.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER base64.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER ftp.c
+gcc -o smbdes.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER libs/smbdes.c
+gcc -o ntlm.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER ntlm.c
+gcc -o stringtable.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER stringtable.c
+gcc -o srvwebadmin.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER webadmin.c
+webadmin.c: In function ‘adminchild’:
+webadmin.c:513:41: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  513 |                                         "</td><td>%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                         ^~~~~~~~~~~~
+......
+  517 |                                  cp->traflim64 / (1024 * 1024),
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint64_t {aka long unsigned int}
+webadmin.c:513:75: note: format string is defined here
+  513 |                               "</td><td>%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                                 |
+      |                                                                 long long unsigned int
+
+webadmin.c:513:41: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  513 |                                         "</td><td>%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                         ^~~~~~~~~~~~
+......
+  519 |                                  cp->traf64 / (1024 * 1024),
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             uint64_t {aka long unsigned int}
+webadmin.c:515:70: note: format string is defined here
+  515 |                                "<td>%"PRINTF_INT64_MODIFIER"u.%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+
+webadmin.c:513:41: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  513 |                                         "</td><td>%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                         ^~~~~~~~~~~~
+......
+  520 |                                  (((cp->traf64/16) *10) / (64*1024))%10,
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     uint64_t {aka long unsigned int}
+webadmin.c:515:96: note: format string is defined here
+  515 |          "<td>%"PRINTF_INT64_MODIFIER"u.%"PRINTF_INT64_MODIFIER"u</td>"
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                                 |
+      |                                                                 long long unsigned int
+
+webadmin.c:596:33: warning: ignoring return value of ‘ftruncate’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  596 |                                 ftruncate(fileno(writable), ftell(writable));
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o srvdnspr.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER dnspr.c
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER plugins.c
+gcc -o ../bin/3proxy -fPIE -O2 -fno-strict-aliasing -pthread   3proxy.o mainfunc.o auth.o authradius.o conf.o datatypes.o srvproxy.o srvpop3p.o srvsmtpp.o srvftppr.o srvsocks.o srvtcppm.o srvudppm.o sockmap.o sockgetchar.o common.o log.o mycrypt.o md5.o md4.o base64.o ftp.o smbdes.o ntlm.o stringtable.o srvwebadmin.o srvdnspr.o plugins.o  -ldl 
+gcc -o mycryptmain.o -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN mycrypt.c
+gcc -o ../bin/mycrypt -fPIE -O2 -fno-strict-aliasing -pthread md4.o md5.o base64.o mycryptmain.o
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DNOPORTMAP pop3p.c
+gcc -o ../bin/pop3p -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o pop3p.o sockgetchar.o log.o common.o  -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DNOPORTMAP smtpp.c
+gcc -o ../bin/smtpp -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o smtpp.o sockgetchar.o base64.o log.o common.o  -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DNOPORTMAP ftppr.c
+gcc -o ../bin/ftppr -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o ftppr.o sockgetchar.o common.o log.o ftp.o  -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DPORTMAP tcppm.c
+gcc -o ../bin/tcppm -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o sockgetchar.o tcppm.o log.o common.o -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DPORTMAP udppm.c
+gcc -o ../bin/udppm -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o sockgetchar.o udppm.o log.o common.o -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DNOPORTMAP socks.c
+gcc -o ../bin/socks -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o socks.o sockgetchar.o log.o common.o -ldl 
+gcc -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER -DWITHMAIN -DNOPORTMAP -DANONYMOUS proxy.c
+proxy.c: In function ‘proxychild’:
+proxy.c:506:36: warning: format ‘%llu’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+  506 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u",&contentlength64);
+      |                                    ^~~                         ~~~~~~~~~~~~~~~~
+      |                                                                |
+      |                                                                uint64_t * {aka long unsigned int *}
+proxy.c:506:61: note: format string is defined here
+  506 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u",&contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+proxy.c:950:36: warning: format ‘%llu’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+  950 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                    ^~~                          ~~~~~~~~~~~~~~~~
+      |                                                                 |
+      |                                                                 uint64_t * {aka long unsigned int *}
+proxy.c:950:61: note: format string is defined here
+  950 |                 sscanf((char *)sb, "%"PRINTF_INT64_MODIFIER"u", &contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+proxy.c:1075:50: warning: format ‘%llx’ expects argument of type ‘long long unsigned int *’, but argument 3 has type ‘uint64_t *’ {aka ‘long unsigned int *’} [-Wformat=]
+ 1075 |                         sscanf((char *)smallbuf, "%"PRINTF_INT64_MODIFIER"x", &contentlength64);
+      |                                                  ^~~                          ~~~~~~~~~~~~~~~~
+      |                                                                               |
+      |                                                                               uint64_t * {aka long unsigned int *}
+proxy.c:1075:75: note: format string is defined here
+ 1075 |           sscanf((char *)smallbuf, "%"PRINTF_INT64_MODIFIER"x", &contentlength64);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long unsigned int *
+
+gcc -o ../bin/proxy -fPIE -O2 -fno-strict-aliasing -pthread sockmap.o proxy.o sockgetchar.o log.o common.o base64.o ftp.o  -ldl 
+make[2]: Entering directory '/tmp/3proxy-0.9.4/src/plugins/StringsPlugin'
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER StringsPlugin.c
+StringsPlugin.c: In function ‘load_string’:
+StringsPlugin.c:35:6: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   35 |      fgets(tmpbuf1, 1023,f);
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+StringsPlugin.c:54:6: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   54 |      fgets(tmpbuf1, 1023,f);
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+gcc -o ../../../bin/StringsPlugin.ld.so -fPIE -O2 -fno-strict-aliasing -pthread -shared StringsPlugin.o
+make[2]: Leaving directory '/tmp/3proxy-0.9.4/src/plugins/StringsPlugin'
+make[2]: Entering directory '/tmp/3proxy-0.9.4/src/plugins/TrafficPlugin'
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER TrafficPlugin.c
+TrafficPlugin.c: In function ‘mylogfunc’:
+TrafficPlugin.c:243:57: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 4 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat]
+  243 |                                         fprintf(stdout, "Port=%hd; Before: srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                   ~~~~~~~~~~~~~~~
+      |                                                                                                                                                                                                                                                                                     |
+      |                                                                                                                                                                                                                                                                                     uint64_t {aka long unsigned int}
+TrafficPlugin.c:243:104: note: format string is defined here
+  243 | intf(stdout, "Port=%hd; Before: srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long int
+
+TrafficPlugin.c:243:57: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 5 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat]
+  243 |                                         fprintf(stdout, "Port=%hd; Before: srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                    ~~~~~~~~~~~~~~~
+      |                                                                                                                                                                                                                                                                                                      |
+      |                                                                                                                                                                                                                                                                                                      uint64_t {aka long unsigned int}
+TrafficPlugin.c:243:135: note: format string is defined here
+  243 |  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long int
+
+TrafficPlugin.c:243:57: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 6 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat]
+  243 |                                         fprintf(stdout, "Port=%hd; Before: srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                     ~~~~~~~~~~~~~~~~~
+      |                                                                                                                                                                                                                                                                                                                            |
+      |                                                                                                                                                                                                                                                                                                                            uint64_t {aka long unsigned int}
+TrafficPlugin.c:243:174: note: format string is defined here
+  243 | RINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long int
+
+TrafficPlugin.c:243:57: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 7 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat]
+  243 |                                         fprintf(stdout, "Port=%hd; Before: srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; After:  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~
+      |                                                                                                                                                                                                                                                                                                                                               |
+      |                                                                                                                                                                                                                                                                                                                                               uint64_t {aka long unsigned int}
+TrafficPlugin.c:243:205: note: format string is defined here
+  243 |  srv=%"PRINTF_INT64_MODIFIER"d, cli=%"PRINTF_INT64_MODIFIER"d; nreads=%ld; nwrites=%ld; Rule=%d\n",myhtons(*SAPORT(&param->sinsr)), statssrv_before, statscli_before, param->statssrv64, param->statscli64,param->nreads,param->nwrites,rule);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                             |
+      |                                                             long long int
+
+gcc -o ../../../bin/TrafficPlugin.ld.so -fPIE -O2 -fno-strict-aliasing -pthread -shared TrafficPlugin.o
+make[2]: Leaving directory '/tmp/3proxy-0.9.4/src/plugins/TrafficPlugin'
+make[2]: Entering directory '/tmp/3proxy-0.9.4/src/plugins/PCREPlugin'
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_compile.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_config.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_dfa_exec.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_exec.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_fullinfo.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_get.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_globals.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_newline.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_ord2utf8.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_refcount.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_study.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_tables.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_valid_utf8.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_version.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER  pcre_xclass.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_plugin.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_maketables.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_ucd.c
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER pcre_table.c
+gcc -o ../../../bin/PCREPlugin.ld.so -fPIE -O2 -fno-strict-aliasing -pthread -shared pcre_compile.o pcre_config.o pcre_dfa_exec.o pcre_exec.o pcre_fullinfo.o pcre_get.o pcre_globals.o pcre_newline.o pcre_ord2utf8.o pcre_refcount.o pcre_study.o pcre_tables.o pcre_valid_utf8.o pcre_version.o pcre_xclass.o pcre_plugin.o pcre_maketables.o pcre_ucd.o pcre_table.o
+make[2]: Leaving directory '/tmp/3proxy-0.9.4/src/plugins/PCREPlugin'
+make[2]: Entering directory '/tmp/3proxy-0.9.4/src/plugins/TransparentPlugin'
+gcc  -g  -fPIC -O2 -fno-strict-aliasing -c -pthread -DWITHSPLICE -D_GNU_SOURCE -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL -DWITH_NETFILTER transparent_plugin.c
+gcc -o ../../../bin/TransparentPlugin.ld.so -fPIE -O2 -fno-strict-aliasing -pthread -shared transparent_plugin.o
+make[2]: Leaving directory '/tmp/3proxy-0.9.4/src/plugins/TransparentPlugin'
+make[1]: Leaving directory '/tmp/3proxy-0.9.4/src'
+
+👤 Шаг 6/6: Создание системных пользователей...
+
+✅ Базовая установка завершена!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 СЛЕДУЮЩИЕ ШАГИ:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  Полная установка системы:
+   bash /opt/tor-socks-farm/scripts/install.sh
+
+2️⃣  Развёртывание 50 Tor-нод:
+   bash /opt/tor-socks-farm/scripts/deploy_tor_instances.sh 50
+
+3️⃣  Развёртывание прокси-эндпоинтов:
+   bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
+
+4️⃣  Включение автоматической ротации:
+   bash /opt/tor-socks-farm/scripts/enable_rotation.sh
+
+5️⃣  Применение правил безопасности:
+   bash /opt/tor-socks-farm/firewall/hardening.sh
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 ДОКУМЕНТАЦИЯ:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Руководства находятся в:
+   /tmp/Proxy-Good-copilot-update-documentation-for-project/
+
+- README.md - Полное руководство (русский)
+- DEPLOYMENT_GUIDE.md - Пошаговая установка
+- QUICK_REFERENCE.md - Справочник команд
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 Готово! Файлы установлены в /opt/tor-socks-farm/
+
+root@vmi2881987:~# 
