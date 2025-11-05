@@ -15,7 +15,13 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-echo "📥 Шаг 1/5: Скачивание файлов проекта..."
+echo "🔧 Шаг 1/6: Установка необходимых инструментов..."
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -qq
+apt-get install -y wget unzip curl
+
+echo ""
+echo "📥 Шаг 2/6: Скачивание файлов проекта..."
 cd /tmp
 rm -f copilot-update-documentation-for-project.zip
 rm -rf Proxy-Good-copilot-update-documentation-for-project
@@ -23,24 +29,23 @@ rm -rf Proxy-Good-copilot-update-documentation-for-project
 wget -q --show-progress https://github.com/mrolivershea-cyber/Proxy-Good/archive/refs/heads/copilot/update-documentation-for-project.zip
 
 echo ""
-echo "📦 Шаг 2/5: Распаковка архива..."
+echo "📦 Шаг 3/6: Распаковка архива..."
 unzip -q copilot-update-documentation-for-project.zip
 
 echo ""
-echo "📁 Шаг 3/5: Копирование файлов в /opt..."
+echo "📁 Шаг 4/6: Копирование файлов в /opt..."
 cd Proxy-Good-copilot-update-documentation-for-project
 cp -r opt/tor-socks-farm /opt/
 chmod +x /opt/tor-socks-farm/scripts/*.sh
 chmod +x /opt/tor-socks-farm/firewall/*.sh
 
 echo ""
-echo "🔧 Шаг 4/5: Установка системных пакетов..."
+echo "🔧 Шаг 5/6: Установка системных пакетов..."
 export DEBIAN_FRONTEND=noninteractive
-apt-get update -qq
 apt-get install -y tor 3proxy netcat-traditional jq
 
 echo ""
-echo "👤 Шаг 5/5: Создание системных пользователей..."
+echo "👤 Шаг 6/6: Создание системных пользователей..."
 useradd -r -s /usr/sbin/nologin debian-tor 2>/dev/null || true
 useradd -r -s /usr/sbin/nologin proxy 2>/dev/null || true
 
