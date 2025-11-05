@@ -38,8 +38,10 @@ while IFS=, read -r instance user password; do
   fi
   
   INSTANCE_NUM=$instance
-  LOCAL_SOCKS=$((BASE_SOCKS_PORT + 10#$INSTANCE_NUM))
-  PUBLIC_PORT=$((BASE_PUBLIC_PORT + 10#$INSTANCE_NUM))
+  # Convert instance number to integer (remove leading zeros)
+  INSTANCE_INT=$((10#$INSTANCE_NUM))
+  LOCAL_SOCKS=$((BASE_SOCKS_PORT + INSTANCE_INT))
+  PUBLIC_PORT=$((BASE_PUBLIC_PORT + INSTANCE_INT))
   
   echo "Deploying 3proxy for instance $INSTANCE_NUM (Public port: $PUBLIC_PORT)..."
   
@@ -69,7 +71,7 @@ echo "=== Verifying endpoints ==="
 
 # Check status of all instances
 FAILED=0
-for i in $(seq -f "%03g" 1 $COUNT); do
+for i in $(seq 1 $COUNT); do
   INSTANCE_NUM=$(printf "%03d" $i)
   if systemctl is-active --quiet 3proxy@$INSTANCE_NUM; then
     echo "✓ Endpoint $INSTANCE_NUM is active"
