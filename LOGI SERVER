@@ -143,4 +143,241 @@ num   pkts bytes target     prot opt in     out     source               destina
 ✓ 3proxy authentication: Required for all connections
 
 Security hardening completed successfully!
-root@vmi2881987:~# 
+root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/deploy_tor_instances.sh 50
+=== Deploying 50 Tor instances ===
+Deploying instance 001 (SOCKS: 9001, Control: 9101)...
+Deploying instance 002 (SOCKS: 9002, Control: 9102)...
+Deploying instance 003 (SOCKS: 9003, Control: 9103)...
+Deploying instance 004 (SOCKS: 9004, Control: 9104)...
+Deploying instance 005 (SOCKS: 9005, Control: 9105)...
+Deploying instance 006 (SOCKS: 9006, Control: 9106)...
+Deploying instance 007 (SOCKS: 9007, Control: 9107)...
+/opt/tor-socks-farm/scripts/deploy_tor_instances.sh: line 30: printf: 008: invalid octal number
+root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh 50
+=== Deploying 50 3proxy endpoints ===
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 41: BASE_SOCKS_PORT + 10##: invalid integer constant (error token is "10##")
+
+=== Verifying endpoints ===
+✗ Endpoint 001 failed to start
+✗ Endpoint 002 failed to start
+✗ Endpoint 003 failed to start
+✗ Endpoint 004 failed to start
+✗ Endpoint 005 failed to start
+✗ Endpoint 006 failed to start
+✗ Endpoint 007 failed to start
+/opt/tor-socks-farm/scripts/deploy_3proxy_endpoints.sh: line 49: printf: 008: invalid octal number
+root@vmi2881987:~# sudo bash /opt/tor-socks-farm/scripts/enable_rotation.sh
+=== Enabling Tor Identity Rotation ===
+Setting rotation interval to 30 minutes...
+
+=== Rotation timer enabled successfully ===
+Rotation interval: 30 minutes
+First rotation: 5 minutes after boot
+
+Check timer status with: systemctl status rotate.timer
+Check rotation logs with: journalctl -u rotate.service
+
+To manually trigger rotation now, run:
+  systemctl start rotate.service
+root@vmi2881987:~# sudo bash /opt/tor-socks-farm/firewall/hardening.sh
+=== Applying Security Hardening ===
+Applying Tor iptables rules...
+=== Applying Tor-specific iptables rules ===
+Creating backup: /root/iptables.backup.1762314503
+Tor UID: 113
+Blocking DNS queries from non-Tor processes...
+✓ DNS isolation rules applied
+
+=== iptables rules applied successfully ===
+
+Backup saved to: /root/iptables.backup.1762314503
+
+To rollback these changes, run:
+  iptables-restore < /root/iptables.backup.1762314503
+
+Current OUTPUT rules:
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 REJECT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:53 ! owner UID match 113 reject-with icmp-port-unreachable
+2        0     0 REJECT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:53 ! owner UID match 113 reject-with icmp-port-unreachable
+3        0     0 REJECT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:53 ! owner UID match 113 reject-with icmp-port-unreachable
+4        0     0 REJECT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:53 ! owner UID match 113 reject-with icmp-port-unreachable
+
+=== Security Hardening Summary ===
+✓ DNS isolation: Only debian-tor user can make DNS queries
+✓ IPv6 disabled: Prevents IPv6 leaks
+✓ Tor instances: Bound to 127.0.0.1 only
+✓ 3proxy authentication: Required for all connections
+
+Security hardening completed successfully!
+root@vmi2881987:~# curl -x ******localhost:20001 https://api.ipify.org
+curl: (5) Could not resolve proxy: ******localhost
+root@vmi2881987:~# systemctl status 'tor@*'
+● tor@default.service - Anonymizing overlay network for TCP
+     Loaded: loaded (/lib/systemd/system/tor@default.service; enabled-runtime; >
+     Active: active (running) since Wed 2025-11-05 04:22:40 CET; 25min ago
+   Main PID: 10003 (tor)
+      Tasks: 1 (limit: 28785)
+     Memory: 104.6M
+        CPU: 5.168s
+     CGroup: /system.slice/system-tor.slice/tor@default.service
+             └─10003 /usr/bin/tor --defaults-torrc /usr/share/tor/tor-service-d>
+
+Nov 05 04:24:48 vmi2881987 Tor[10003]: Bootstrapped 61% (loading_descriptors): >
+Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 68% (loading_descriptors): >
+Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 73% (loading_descriptors): >
+Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 75% (enough_dirinfo): Loade>
+Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 80% (ap_conn): Connecting t>
+Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 85% (ap_conn_done): Connect>
+Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 89% (ap_handshake): Finishi>
+Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 90% (ap_handshake_done): Ha>
+Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 95% (circuit_create): Estab>
+Nov 05 04:24:49 vmi2881987 Tor[10003]: Bootstrapped 100% (done): Done
+
+● tor@002.service - Tor instance 002
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
+     Active: active (running) since Wed 2025-11-05 04:44:39 CET; 3min 59s ago
+   Main PID: 12443 (tor)
+      Tasks: 1 (limit: 28785)
+     Memory: 95.7M
+        CPU: 1.699s
+     CGroup: /system.slice/system-tor.slice/tor@002.service
+             └─12443 /usr/bin/tor -f /etc/tor/torrc.instance002
+
+Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.959 [notice] Tor can't h>
+Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.959 [notice] Read config>
+Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opening Soc>
+Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opened Sock>
+Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opening DNS>
+Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opened DNS >
+Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opening Tra>
+Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opened Tran>
+Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opening Con>
+Nov 05 04:44:39 vmi2881987 tor[12443]: Nov 05 04:44:39.961 [notice] Opened Cont>
+
+● tor@006.service - Tor instance 006
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
+     Active: active (running) since Wed 2025-11-05 04:44:43 CET; 3min 56s ago
+   Main PID: 12616 (tor)
+      Tasks: 1 (limit: 28785)
+     Memory: 95.6M
+        CPU: 1.894s
+     CGroup: /system.slice/system-tor.slice/tor@006.service
+             └─12616 /usr/bin/tor -f /etc/tor/torrc.instance006
+
+Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.484 [notice] Tor can't h>
+Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.484 [notice] Read config>
+Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opening Soc>
+Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opened Sock>
+Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opening DNS>
+Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opened DNS >
+Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opening Tra>
+Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opened Tran>
+Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opening Con>
+Nov 05 04:44:43 vmi2881987 tor[12616]: Nov 05 04:44:43.488 [notice] Opened Cont>
+
+● tor@005.service - Tor instance 005
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
+     Active: active (running) since Wed 2025-11-05 04:44:42 CET; 3min 56s ago
+   Main PID: 12573 (tor)
+      Tasks: 1 (limit: 28785)
+     Memory: 95.7M
+        CPU: 1.701s
+     CGroup: /system.slice/system-tor.slice/tor@005.service
+             └─12573 /usr/bin/tor -f /etc/tor/torrc.instance005
+
+Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.581 [notice] Tor can't h>
+Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.581 [notice] Read config>
+Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opening Soc>
+Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opened Sock>
+Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opening DNS>
+Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opened DNS >
+Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opening Tra>
+Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opened Tran>
+Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opening Con>
+Nov 05 04:44:42 vmi2881987 tor[12573]: Nov 05 04:44:42.583 [notice] Opened Cont>
+
+● tor@007.service - Tor instance 007
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
+     Active: active (running) since Wed 2025-11-05 04:44:44 CET; 3min 55s ago
+   Main PID: 12661 (tor)
+      Tasks: 1 (limit: 28785)
+     Memory: 95.8M
+        CPU: 1.612s
+     CGroup: /system.slice/system-tor.slice/tor@007.service
+             └─12661 /usr/bin/tor -f /etc/tor/torrc.instance007
+
+Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.332 [notice] Tor can't h>
+Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.333 [notice] Read config>
+Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opening Soc>
+Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opened Sock>
+Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opening DNS>
+Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opened DNS >
+Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opening Tra>
+Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opened Tran>
+Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opening Con>
+Nov 05 04:44:44 vmi2881987 tor[12661]: Nov 05 04:44:44.335 [notice] Opened Cont>
+
+● tor@004.service - Tor instance 004
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
+     Active: active (running) since Wed 2025-11-05 04:44:41 CET; 3min 57s ago
+   Main PID: 12529 (tor)
+      Tasks: 1 (limit: 28785)
+     Memory: 95.6M
+        CPU: 1.637s
+     CGroup: /system.slice/system-tor.slice/tor@004.service
+             └─12529 /usr/bin/tor -f /etc/tor/torrc.instance004
+
+Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.683 [notice] Tor can't h>
+Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.683 [notice] Read config>
+Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opening Soc>
+Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opened Sock>
+Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opening DNS>
+Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opened DNS >
+Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opening Tra>
+Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opened Tran>
+Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opening Con>
+Nov 05 04:44:41 vmi2881987 tor[12529]: Nov 05 04:44:41.685 [notice] Opened Cont>
+
+● tor@003.service - Tor instance 003
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
+     Active: active (running) since Wed 2025-11-05 04:44:40 CET; 3min 58s ago
+   Main PID: 12486 (tor)
+      Tasks: 1 (limit: 28785)
+     Memory: 95.7M
+        CPU: 1.771s
+     CGroup: /system.slice/system-tor.slice/tor@003.service
+             └─12486 /usr/bin/tor -f /etc/tor/torrc.instance003
+
+Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.829 [notice] Tor can't h>
+Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.829 [notice] Read config>
+Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.831 [notice] Opening Soc>
+Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opened Sock>
+Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opening DNS>
+Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opened DNS >
+Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opening Tra>
+Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opened Tran>
+Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opening Con>
+Nov 05 04:44:40 vmi2881987 tor[12486]: Nov 05 04:44:40.832 [notice] Opened Cont>
+
+● tor@001.service - Tor instance 001
+     Loaded: loaded (/etc/systemd/system/tor@.service; enabled; vendor preset: >
+     Active: active (running) since Wed 2025-11-05 04:44:39 CET; 4min 0s ago
+   Main PID: 12399 (tor)
+      Tasks: 1 (limit: 28785)
+     Memory: 95.7M
+        CPU: 1.752s
+     CGroup: /system.slice/system-tor.slice/tor@001.service
+             └─12399 /usr/bin/tor -f /etc/tor/torrc.instance001
+
+Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.050 [notice] Tor can't h>
+Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.050 [notice] Read config>
+Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opening Soc>
+Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opened Sock>
+Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opening DNS>
+Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opened DNS >
+Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opening Tra>
+Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opened Tran>
+Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opening Con>
+Nov 05 04:44:39 vmi2881987 tor[12399]: Nov 05 04:44:39.052 [notice] Opened Cont>
+lines 145-167/167 (END)
