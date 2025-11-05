@@ -42,7 +42,19 @@ chmod +x /opt/tor-socks-farm/firewall/*.sh
 echo ""
 echo "🔧 Шаг 5/6: Установка системных пакетов..."
 export DEBIAN_FRONTEND=noninteractive
-apt-get install -y tor 3proxy netcat-traditional jq
+apt-get install -y tor netcat-traditional jq build-essential
+
+# Установка 3proxy из исходников
+echo "Установка 3proxy..."
+cd /tmp
+wget -q https://github.com/3proxy/3proxy/archive/refs/tags/0.9.4.tar.gz
+tar xzf 0.9.4.tar.gz
+cd 3proxy-0.9.4
+make -f Makefile.Linux
+cp bin/3proxy /usr/bin/
+chmod +x /usr/bin/3proxy
+cd /tmp
+rm -rf 3proxy-0.9.4 0.9.4.tar.gz
 
 echo ""
 echo "👤 Шаг 6/6: Создание системных пользователей..."

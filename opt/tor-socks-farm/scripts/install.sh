@@ -11,10 +11,27 @@ echo "=== Tor-SOCKS Farm Installation Script ==="
 echo "Starting installation process..."
 
 # Install required packages
-echo "Installing packages: tor, 3proxy, netcat-traditional, jq..."
+echo "Installing packages: tor, netcat-traditional, jq, build-essential..."
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -qq
-apt-get install -y tor 3proxy netcat-traditional jq
+apt-get install -y tor netcat-traditional jq build-essential
+
+# Install 3proxy from source if not already installed
+if ! command -v 3proxy &> /dev/null; then
+  echo "Installing 3proxy from source..."
+  cd /tmp
+  wget -q https://github.com/3proxy/3proxy/archive/refs/tags/0.9.4.tar.gz
+  tar xzf 0.9.4.tar.gz
+  cd 3proxy-0.9.4
+  make -f Makefile.Linux
+  cp bin/3proxy /usr/bin/
+  chmod +x /usr/bin/3proxy
+  cd /tmp
+  rm -rf 3proxy-0.9.4 0.9.4.tar.gz
+  echo "3proxy installed successfully"
+else
+  echo "3proxy already installed"
+fi
 
 # Create system users
 echo "Creating system users..."
