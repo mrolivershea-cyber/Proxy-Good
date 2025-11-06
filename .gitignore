@@ -1,0 +1,43 @@
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Build artifacts
+dist/
+build/
+*.o
+*.so
+*.a
+
+# Node modules (if any)
+node_modules/
+
+# Python cache (if any)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Backup files
+*.backup.*
+
+# Test artifacts
+test-results/
+coverage/

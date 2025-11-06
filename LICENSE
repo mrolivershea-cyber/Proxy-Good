@@ -1,0 +1,72 @@
+MIT License
+
+Copyright (c) 2025 Tor-SOCKS Farm Automation Project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+IMPORTANT LEGAL NOTICE:
+
+This software is provided for EDUCATIONAL AND RESEARCH PURPOSES ONLY.
+
+By using this software, you acknowledge and agree that:
+
+1. You are solely responsible for compliance with all applicable laws and
+   regulations in your jurisdiction regarding the use of Tor, proxy services,
+   and network technologies.
+
+2. The use of Tor and proxy services may be restricted, regulated, or
+   prohibited in certain countries or jurisdictions. It is your responsibility
+   to understand and comply with such restrictions.
+
+3. This software should not be used for any illegal activities, including but
+   not limited to: unauthorized access to computer systems, distribution of
+   illegal content, harassment, fraud, or any activity that violates local,
+   national, or international laws.
+
+4. The authors and contributors of this software disclaim all liability for
+   any misuse, abuse, or illegal use of this software.
+
+5. This software is provided "as is" without warranty of any kind. The authors
+   and contributors make no representations or warranties regarding the
+   security, reliability, or fitness for any particular purpose.
+
+6. You agree to indemnify and hold harmless the authors and contributors from
+   any claims, damages, or legal actions arising from your use of this software.
+
+7. The authors and contributors do not endorse or encourage the use of this
+   software for circumventing legitimate security measures, violating terms of
+   service, or engaging in any form of cybercrime.
+
+8. By deploying this software, you acknowledge that you are creating a service
+   that may be used by third parties, and you are responsible for monitoring
+   and controlling such use to ensure it complies with applicable laws.
+
+9. This software involves the operation of network services that may be subject
+   to data protection and privacy laws. You are responsible for ensuring
+   compliance with such laws, including GDPR, CCPA, and other applicable
+   regulations.
+
+10. The use of Tor is subject to the Tor Project's legal FAQ and terms. Users
+    should familiarize themselves with these terms at:
+    https://www.torproject.org/about/legal/
+
+USE AT YOUR OWN RISK. The authors and contributors bear no responsibility for
+any consequences resulting from the use or misuse of this software.

@@ -1,0 +1,13 @@
+[Unit]
+Description=3proxy endpoint %i
+After=network-online.target
+
+[Service]
+User=proxy
+Group=proxy
+ExecStart=/usr/bin/3proxy /etc/3proxy/instance%i.cfg
+Restart=on-failure
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
